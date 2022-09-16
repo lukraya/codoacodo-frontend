@@ -1,0 +1,136 @@
+/* Reseteando todo a cero */
+*
+{
+  margin: 0%;
+  padding: 0%
+}
+/* Body */
+body
+{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(125deg, black,rgb(81, 80, 80));
+  /* animation: cambiar 10s ease-in infinite; */
+}
+
+/* Barra navegación */
+nav
+{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(190, 189, 189,0.5);
+  width: 100%;
+  height: 40px;
+}
+
+/* Clase nav-enlace */
+.nav-enlace
+{
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  list-style: none;
+}
+
+/*Menu*/
+.btn_menu
+{
+
+}
+.submenu
+{ 
+  position:absolute;
+  background: white;
+  width:120%;
+  visibility: hidden;
+  opacity: 0; 
+  transition: opacity 1.5s;
+}
+
+.submenu li a
+{
+  display: block;
+  padding: 15px;
+  color:#fff;
+  text-decoration: none;
+}
+.submenu li:hover .submenu
+{
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Buscador de la barra de navegación */
+.buscar
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+  padding: 2px;
+}
+
+.buscar input
+{
+  width: 100%;
+  height: 95%;
+ 
+  font-size: 18px;
+  color:black;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 50px;
+}
+
+.btn
+{
+  position:right;
+  background: gray;
+  width: 40px; /*Ancho del circulo*/
+  height: 40px;  /*alto del circulo*/
+  line-height: 40px;  /*centrado de la lupa*/
+  text-align: center; /*centrado de la lupa*/
+  color: white;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*Carrito*/
+.btn_carrito
+{
+  color: white;
+  font-size: 20px;
+}
+
+/*Cuenta*/
+.btn_cta
+{
+  color: white;
+  font-size: 20px;
+}
+/* Media Query para distintas medidas */
+@media (max-width: 600px)
+{
+  nav
+  {
+    background-color: aliceblue; /*Dsp lo saco pero quiero tenerlo para ver cnd cambia*/
+  }
+  #carrito
+  {
+    display:none;
+  }
+  #cuenta
+  {
+    display: none;
+  }
+}
+
+
+/* Cambiar */
+/* @keyframes cambiar
+{
+  0%{background-position: 0% 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0% 50%;}  
+} */
