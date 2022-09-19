@@ -2,7 +2,7 @@
 *
 {
   margin: 0%;
-  padding: 0%
+  padding: 0%;
 }
 /* Body */
 body
@@ -10,6 +10,7 @@ body
   width: 100%;
   height: 100vh;
   background: linear-gradient(125deg, black,rgb(81, 80, 80));
+  overflow: hidden; /* Lu: agregué esto para sacar el scroll horizontal que aparecía */
   /* animation: cambiar 10s ease-in infinite; */
 }
 
@@ -134,3 +135,15 @@ nav
   50%{background-position: 100% 50%;}
   100%{background-position: 0% 50%;}  
 } */
+
+
+/* FOOTER */
+.footer {
+  color: #fff;
+  background-color: rgb(190, 189, 189,0.5);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* antes del position no hacía falta */
+}
