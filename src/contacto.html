@@ -3,43 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Contacto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/21d5839768.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Barra Navegación superior -->
-    <nav>
+    <header>
+        <nav>
 
-        <a href="#" class="nav-enlace" id="menu">
-            <div class="btn_menu">
-                <i class="fa-solid fa-bars"></i> <!-- Lu: por qué un <i> acá? -->
-                <ul class="submenu">
-                    <li><a href="#">Cat.1</a></li>
-                </ul>
+            <a href="#" class="nav-enlace" id="menu">
+                <div class="btn_menu">
+                    <i class="fa-solid fa-bars"></i> <!-- Lu: por qué un <i> acá? -->
+                    <ul class="submenu">
+                        <li><a href="#">Cat.1</a></li>
+                    </ul>
+                </div>
+            </a>
+            
+            <div class="buscar">
+                <input type="text" placeholder="¿Qué queres buscar?" required> <!-- Lu: acento en querés? -->
+                <div class="btn">
+                    <i class="fa-solid fa-magnifying-glass icon"></i>
+                </div>
             </div>
-        </a>
     
-        <div class="buscar">
-            <input type="text" placeholder="¿Qué queres buscar?" required> <!-- Lu: acento en querés? -->
-            <div class="btn">
-                <i class="fa-solid fa-magnifying-glass icon"></i>
+            <a href="#" class=" nav-enlace" id="carrito">
+                <div class="btn_carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </a>
+    
+            <a href="#" class=" nav-enlace" id="cuenta"> 
+                <div class="btn_cta">
+                    <i class="fa-regular fa-circle-user"></i>
+                </div>
+            </a> 
+        </nav>
+    </header>
+    <main class="contacto">
+        <h2 class="contacto-titulo">¿Tenés una consulta? Dejala acá</h2>
+        <form action="" class="form">
+            <div class="form-group">
+                <label for="nombre" class="form-label">Nombre: </label>
+                <input type="text" name="nombre">
             </div>
-        </div>
-
-        <a href="#" class=" nav-enlace" id="carrito">
-            <div class="btn_carrito">
-                <i class="fa-solid fa-cart-shopping"></i>
+            <div class="form-group">
+                <label for="apellido" class="form-label">Apellido: </label>
+                <input type="text" name="apellido">
             </div>
-        </a>
-
-        <a href="#" class=" nav-enlace" id="cuenta"> 
-            <div class="btn_cta">
-                <i class="fa-regular fa-circle-user"></i>
+            <div class="form-group">
+                <label for="email" class="form-label">Email: </label>
+                <input type="email" name="email">
             </div>
-        </a> 
-    </nav>
-    <p>Lorem ipsum dolor sit amet.</p>
+            <div class="form-group">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="number" name="telefono"> <!-- buscar tipo -->
+            </div>
+            <div class="form-group">
+                <input type="submit" id="boton-contacto">
+            </div>
+        </form>
+    </main>
     <footer class="footer">Sitio realizado como proyecto para el curso de Programación Fullstack Python del programa Codo a Codo</footer>
 </body>
 </html>

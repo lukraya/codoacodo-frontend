@@ -7,6 +7,7 @@
 /* Body */
 body
 {
+  color: #fff; /* Lu: dado el fondo, me parece mejor poner todo blanco y cambiarlo si queremos en casos particulares */
   width: 100%;
   height: 100vh;
   background: linear-gradient(125deg, black,rgb(81, 80, 80));
@@ -136,10 +137,39 @@ nav
   100%{background-position: 0% 50%;}  
 } */
 
+/* CONTACTO */
+.contacto {
+  /* Need a font, and make it bigger */
+  height: 100%; /* técnicamente pisa el footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacto-titulo {
+  margin: 2%;
+}
+
+/* .form {
+  padding: 1% 0%;
+} */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+}
+
+.form-label {
+  margin-bottom: 3%;
+}
+
+#boton-contacto {
+  
+}
 
 /* FOOTER */
 .footer {
-  color: #fff;
   background-color: rgb(190, 189, 189,0.5);
   display: flex;
   justify-content: center;
