@@ -9,9 +9,9 @@ body
 {
   color: #fff; /* Lu: dado el fondo, me parece mejor poner todo blanco y cambiarlo si queremos en casos particulares */
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background: linear-gradient(125deg, black,rgb(81, 80, 80));
-  overflow: hidden; /* Lu: agregué esto para sacar el scroll horizontal que aparecía */
+  overflow-x: hidden; /* Lu: agregué esto para sacar el scroll horizontal que aparecía. Tuve q poner "-x" xq no me dejaba scrollear verticalmente, ups */
   /* animation: cambiar 10s ease-in infinite; */
 }
 
@@ -140,32 +140,55 @@ nav
 /* CONTACTO */
 .contacto {
   /* Need a font, and make it bigger */
-  height: 100%; /* técnicamente pisa el footer */
-  display: flex;
+  /* height: 100%; */
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  grid-template-areas: 
+    "titulo titulo titulo titulo"
+    ". form form ."
+    ". map map .";
 }
 
 .contacto-titulo {
   margin: 2%;
+  grid-area: titulo;
+  text-align: center;
 }
 
-/* .form {
-  padding: 1% 0%;
-} */
+.form {
+  grid-area: form;
+}
 
 .form-group {
   display: flex;
+  justify-content: space-evenly;
+}
+
+.form-item {
+  display: flex;
   flex-direction: column;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+}
+
+.form-item-center {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 5%;
 }
 
 .form-label {
   margin-bottom: 3%;
 }
 
-#boton-contacto {
-  
+/* #boton-contacto {
+  margin-top: 5%;
+} */
+
+.map {
+  grid-area: map;
+  width: 100%; /* width="400" en el html q me dio gmaps */
 }
 
 /* FOOTER */
@@ -173,7 +196,8 @@ nav
   background-color: rgb(190, 189, 189,0.5);
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%; /* antes del position no hacía falta */
+  margin-top: 2%;
 }
