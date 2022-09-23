@@ -1,47 +1,61 @@
 <!DOCTYPE html>
-<html lang="es"> <!--Lu: Cambié el idioma de las páginas a español, vscode lo pone en inglés automáticamente -->
+<html lang="es">
+<!--Lu: Cambié el idioma de las páginas a español, vscode lo pone en inglés automáticamente -->
+
 <head>
     <script src="https://kit.fontawesome.com/21d5839768.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Inicio</title> <!--Lu: Cambié el título de las páginas (lo q muestra en las pestañas el navegador) -->
+    <title>Inicio</title>
+    <!--Lu: Cambié el título de las páginas (lo q muestra en las pestañas el navegador) -->
 </head>
+
 <body>
-  <!-- Barra Navegación superior -->
-  <nav>
+    <!-- Barra Navegación superior -->
+    <header>
+        <nav>
 
-    <a href="#" class="nav-enlace" id="menu">
-        <div class="btn_menu">
-            <i class="fa-solid fa-bars"></i> <!-- Lu: por qué un <i> acá? -->
-            <ul class="submenu">
-                <li><a href="#">Cat.1</a></li>
+            <!-- Barra de menu las tres lineas -->
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">Categoria 1</a></li>
+                <li><a href="#">categoria 2</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">#</a></li>
             </ul>
-        </div>
-    </a>
-  
-    <div class="buscar">
-        <input type="text" placeholder="¿Qué queres buscar?" required> <!-- Lu: acento en querés? Hay un tipo de input llamado "search", me parece q iría ese -->
-        <div class="btn">
-            <i class="fa-solid fa-magnifying-glass icon"></i>
-        </div>
-    </div>
+            <!-- Barra de busqueda -->
+            <div class="buscar">
+                <input type="search" placeholder="¿Qué queres buscar?" required>
+                <div class="busca-btn">
+                    <i class="fa-solid fa-magnifying-glass icon"></i>
+                </div>
+            </div>
 
-    <a href="#" class=" nav-enlace" id="carrito">
-        <div class="btn_carrito">
-            <i class="fa-solid fa-cart-shopping"></i>
-        </div>
-    </a>
+            <!-- carrito -->
+            <div>
+                <a href="#" class="carrito">
+                    <div class="carrito-btn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </a>
+            </div>
 
-    <a href="#" class=" nav-enlace" id="cuenta"> 
-        <div class="btn_cta">
-            <i class="fa-regular fa-circle-user"></i>
-        </div>
-    </a> 
-  </nav>
+            <!-- Logo -->
+            <div>
+                <img src="img/Logo 2.png" alt="" class="logo">
+            </div>
 
-  <footer class="footer">Sitio realizado como proyecto para el curso de Programación Fullstack Python del programa Codo a Codo</footer>
+        </nav>
+    </header>
+
+    <footer class="footer">Sitio realizado como proyecto para el curso de Programación Fullstack Python del programa
+        Codo a Codo</footer>
 </body>
 
 </html>

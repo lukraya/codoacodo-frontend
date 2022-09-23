@@ -1,130 +1,133 @@
+/* GoogleFont */
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Combo&family=Montserrat:wght@400;600;900&display=swap');
+
 /* Reseteando todo a cero */
 *
 {
-  margin: 0%;
-  padding: 0%;
+  margin:0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 /* Body */
 body
 {
-  color: #fff; /* Lu: dado el fondo, me parece mejor poner todo blanco y cambiarlo si queremos en casos particulares */
-  width: 100%;
-  /* height: 100vh; */
+  font-family: Montserrat, sans-serfi;
+  color: white;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(125deg, black,rgb(81, 80, 80));
-  overflow-x: hidden; /* Lu: agregué esto para sacar el scroll horizontal que aparecía. Tuve q poner "-x" xq no me dejaba scrollear verticalmente, ups */
-  /* animation: cambiar 10s ease-in infinite; */
 }
 
 /* Barra navegación */
-nav
+/* Nav */
+nav{
+    height: 95px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(47, 46, 46, 0.442);
+}
+/* Logo */
+.logo
 {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(190, 189, 189,0.5);
-  width: 100%;
-  height: 40px;
+    width: 90px;
+    margin-right: 20px;
+}
+/* boton menu */
+.bar-btn
+{
+    font-size: 25px;
+    color:white;
+    margin-left:20px;
+    cursor: pointer;
 }
 
-/* Clase nav-enlace */
-.nav-enlace
+.nav-menu   
 {
-  display: inline-block;
-  padding: 10px 30px;
-  text-decoration: none;
-  list-style: none;
+    position: fixed;
+    width: 30%;
+    height: 0vh;
+    top: 100px;
+    background-color:  rgba(47, 46, 46, 0.442);  /*Color del menu cuando se desplega*/
+    text-align: center;
+    transition: all .5s;
 }
 
-/*Menu*/
-.btn_menu
-{
-
-}
-.submenu
-{ 
-  position:absolute;
-  background: white;
-  width:120%;
-  visibility: hidden;
-  opacity: 0; 
-  transition: opacity 1.5s;
+.nav-menu li{
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
 }
 
-.submenu li a
-{
-  display: block;
-  padding: 15px;
-  color:#fff;
-  text-decoration: none;
-}
-.submenu li:hover .submenu
-{
-  visibility: visible;
-  opacity: 1;
+.nav-menu li a{
+    color:wheat;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
-/* Buscador de la barra de navegación */
+.nav-menu li a.active, .nav-menu li a:hover
+{
+    color:red;  
+    transition: .3s;
+}
+
+#check
+{
+    display: none;  /* Oculta el check */
+}
+
+#check:checked ~ .nav-menu
+{
+    height: 100vh;
+}
+#check:checked ~ .nav-menu li
+{
+    display:block;
+}
+
+/* Buqueda */
 .buscar
 {
   display:flex;
-  justify-content: center;
-  align-items: center;
-  /* position: absolute; */
-  padding: 2px;
 }
 
 .buscar input
 {
   width: 100%;
   height: 95%;
- 
   font-size: 18px;
   color:black;
-  outline: none;
   border: 1px solid silver;
   border-radius: 50px;
 }
 
-.btn
+.busca-btn
 {
-  position:right;
-  background: gray;
-  width: 40px; /*Ancho del circulo*/
-  height: 40px;  /*alto del circulo*/
-  line-height: 40px;  /*centrado de la lupa*/
-  text-align: center; /*centrado de la lupa*/
   color: white;
   font-size: 18px;
   border-radius: 50%;
   cursor: pointer;
 }
 
-/*Carrito*/
-.btn_carrito
+/* Carrito */
+.carrito-btn
 {
   color: white;
   font-size: 20px;
 }
 
-/*Cuenta*/
-.btn_cta
-{
-  color: white;
-  font-size: 20px;
-}
+
 /* Media Query para distintas medidas */
 @media (max-width: 600px)
 {
-  nav
-  {
-    background-color: aliceblue; /*Dsp lo saco pero quiero tenerlo para ver cnd cambia*/
-  }
-  #carrito
+  .carrito
   {
     display:none;
-  }
-  #cuenta
-  {
-    display: none;
   }
 }
 
