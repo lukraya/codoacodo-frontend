@@ -9,38 +9,46 @@
     <script src="https://kit.fontawesome.com/21d5839768.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
+   <!-- Barra Navegación superior -->
+   <header>
+    <nav>
 
-            <a href="#" class="nav-enlace" id="menu">
-                <div class="btn_menu">
-                    <i class="fa-solid fa-bars"></i> <!-- Lu: por qué un <i> acá? -->
-                    <ul class="submenu">
-                        <li><a href="#">Cat.1</a></li>
-                    </ul>
-                </div>
-            </a>
-            
-            <div class="buscar">
-                <input type="text" placeholder="¿Qué queres buscar?" required> <!-- Lu: acento en querés? -->
-                <div class="btn">
-                    <i class="fa-solid fa-magnifying-glass icon"></i>
-                </div>
+        <!-- Barra de menu las tres lineas -->
+        <input type="checkbox" id="check">
+        <label for="check" class="bar-btn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <ul class="nav-menu">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="#">Categoria 1</a></li>
+            <li><a href="#">categoria 2</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#">#</a></li>
+        </ul>
+        <!-- Barra de busqueda -->
+        <div class="buscar">
+            <input type="search" placeholder="¿Qué queres buscar?" required>
+            <div class="busca-btn">
+                <i class="fa-solid fa-magnifying-glass icon"></i>
             </div>
-    
-            <a href="#" class=" nav-enlace" id="carrito">
-                <div class="btn_carrito">
+        </div>
+
+        <!-- carrito -->
+        <div>
+            <a href="#" class="carrito">
+                <div class="carrito-btn">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
             </a>
-    
-            <a href="#" class=" nav-enlace" id="cuenta"> 
-                <div class="btn_cta">
-                    <i class="fa-regular fa-circle-user"></i>
-                </div>
-            </a> 
-        </nav>
-    </header>
+        </div>
+
+        <!-- Logo -->
+        <div>
+            <a href="index.html"><img src="img/OtroLogo.png" alt="" class="logo"></a>
+        </div>
+
+    </nav>
+</header>
     <main class="contacto">
         <h2 class="contacto-titulo">¿Tenés una consulta? Dejala acá</h2>
         <form action="" class="form">
