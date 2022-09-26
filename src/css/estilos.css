@@ -16,7 +16,9 @@ body
   font-family: Montserrat, sans-serfi;
   color: white;
   width: 100vw;
-  height: 100vh;
+  overflow-x: hidden; /* LU: sin esto aparece un scroll horizontal en contacto.html */
+  /* height: 100vh; */ /* LU: no sé qué hace esto, pero en contacto, donde hay scroll vertical, 
+    hace que el background vuelva a empezar */
   background: linear-gradient(125deg, black,rgb(81, 80, 80));
 }
 
@@ -170,7 +172,6 @@ nav{
 
 /* CONTACTO */
 .contacto {
-  /* Need a font, and make it bigger */
   /* height: 100%; */
   /* display: flex;
   flex-direction: column;
