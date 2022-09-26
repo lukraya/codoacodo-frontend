@@ -15,11 +15,19 @@ body
 {
   font-family: Montserrat, sans-serfi;
   color: white;
-  width: 100vw;
-  overflow-x: hidden; /* LU: sin esto aparece un scroll horizontal en contacto.html */
+  max-width: 100vw; /* LU: solucion alternativa al overflow-x */
+  /* overflow-x: hidden; */ /* LU: sin esto aparece un scroll horizontal en contacto.html */
   /* height: 100vh; */ /* LU: no sé qué hace esto, pero en contacto, donde hay scroll vertical, 
     hace que el background vuelva a empezar */
+  min-height: 100vh; /* LU: esto da height pero si se extiende el contenido (scroll), no pasa nada */
   background: linear-gradient(125deg, black,rgb(81, 80, 80));
+  /* LU: el footer con position se comporta distinto dependiendo de la vista.
+    Por eso haría flex o grid acá en body; para cualquiera de los dos casos, todas las vistas
+    deberían tener header-main-footer dentro de body */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* LU: necesario para que el footer quede al pie. 
+    Por ahora en index hace q el carousel quede muy en el medio, pero porque falta contenido */
 }
 
 /* Barra navegación */
@@ -228,9 +236,9 @@ nav{
   background-color: rgb(190, 189, 189,0.5);
   display: flex;
   justify-content: center;
-  position: relative;
+  /* position: absolute;
   bottom: 0;
-  width: 100%; /* antes del position no hacía falta */
+  width: 100%; */ /* antes del position no hacía falta */
   margin-top: 2%;
 }
 
