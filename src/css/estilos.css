@@ -222,9 +222,27 @@ nav{
   margin-bottom: 3%;
 }
 
-/* #boton-contacto {
-  margin-top: 5%;
-} */
+.form input {
+  color: #fff;
+  background: none;
+  border: none;
+  border-bottom: 1px white solid;
+}
+
+#caja-consulta {
+  color: #fff;
+  background: none;
+  border: 5px white dotted;
+  border-radius: 10%;
+  box-sizing: border-box;
+}
+
+#boton-contacto {
+  background-color: rgb(190, 189, 189,0.3);
+  border: 0;
+  width: 30%;
+  margin: auto;
+}
 
 .map {
   grid-area: map;
