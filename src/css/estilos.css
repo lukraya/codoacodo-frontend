@@ -9,11 +9,13 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  font-family: Montserrat, sans-serif; /* LU: poniendo en el body, no llega a inputs 
+    y otros elementos q la pisan con otras fuentes */
 }
 /* Body */
 body
 {
-  font-family: Montserrat, sans-serfi;
+  /* font-family: Montserrat, sans-serif; */
   color: white;
   max-width: 100vw; /* LU: solucion alternativa al overflow-x */
   /* overflow-x: hidden; */ /* LU: sin esto aparece un scroll horizontal en contacto.html */
@@ -226,6 +228,10 @@ nav{
   border: 0;
   width: 30%;
   margin: auto;
+}
+#boton-contacto:hover {
+  background-color: rgb(190, 189, 189);
+  cursor: pointer;
 }
 .map {
   grid-area: map;
