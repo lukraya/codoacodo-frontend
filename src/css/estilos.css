@@ -21,13 +21,18 @@ body
     hace que el background vuelva a empezar */
   min-height: 100vh; /* LU: esto da height pero si se extiende el contenido (scroll), no pasa nada */
   background: linear-gradient(125deg, black,rgb(81, 80, 80));
-  /* LU: el footer con position se comporta distinto dependiendo de la vista.
-    Por eso haría flex o grid acá en body; para cualquiera de los dos casos, todas las vistas
-    deberían tener header-main-footer dentro de body */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* LU: necesario para que el footer quede al pie. 
-    Por ahora en index hace q el carousel quede muy en el medio, pero porque falta contenido */
+  /* LU: nueva solución al maqueteado general del sitio */
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: max-content auto max-content;
+}
+
+/* Posicionamiento de header */
+.header {
+  grid-area: header;
 }
 
 /* Barra navegación */
@@ -54,7 +59,6 @@ nav{
     margin-left:20px;
     cursor: pointer;
 }
-
 .nav-menu   
 {
     position: fixed;
@@ -65,32 +69,27 @@ nav{
     text-align: center;
     transition: all .5s;
 }
-
 .nav-menu li{
     display: none;
     line-height: 30px;
     margin: 50px 0;
     transition: all .5s;
 }
-
 .nav-menu li a{
     color:wheat;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
 }
-
 .nav-menu li a.active, .nav-menu li a:hover
 {
     color:red;  
     transition: .3s;
 }
-
 #check
 {
     display: none;  /* Oculta el check */
 }
-
 #check:checked ~ .nav-menu
 {
     height: 100vh;
@@ -99,13 +98,11 @@ nav{
 {
     display:block;
 }
-
 /* Buqueda */
 .buscar
 {
   display:flex;
 }
-
 .buscar input
 {
   width: 100%;
@@ -115,7 +112,6 @@ nav{
   border: 1px solid silver;
   border-radius: 50px;
 }
-
 .busca-btn
 {
   color: white;
@@ -123,7 +119,6 @@ nav{
   border-radius: 50%;
   cursor: pointer;
 }
-
 /* Carrito */
 .carrito-btn
 {
@@ -131,6 +126,12 @@ nav{
   font-size: 20px;
 }
 
+/* Posicionamiento contenido principal */
+.main {
+  grid-area: main;
+}
+
+/* Index */
 /*Carrousel del index*/
 #contenedor_carr
 {
@@ -144,13 +145,11 @@ nav{
         height: 100%;
     position: relative;
 }
-
 .tarjeta-carr
 {
     background-color: gray;
     height: 100%;
 }
-
 .flechas-carr
 {
     position: absolute;
@@ -162,7 +161,6 @@ nav{
     justify-content: space-between;
     padding: 20px;
 }
-
 /* Puntitos de abajo del carrousel */
 #puntitos
 {
@@ -180,85 +178,70 @@ nav{
 
 /* CONTACTO */
 .contacto {
-  /* height: 100%; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   display: grid;
   grid-template-areas: 
     "titulo titulo titulo titulo"
     ". form form ."
     ". map map .";
 }
-
 .contacto-titulo {
   margin: 2%;
   grid-area: titulo;
   text-align: center;
 }
-
 .form {
   grid-area: form;
 }
-
 .form-group {
   display: flex;
   justify-content: space-evenly;
 }
-
 .form-item {
   display: flex;
   flex-direction: column;
   margin-bottom: 5%;
 }
-
 .form-item-center {
   width: 70%;
   margin: auto;
   margin-bottom: 5%;
 }
-
 .form-label {
   margin-bottom: 3%;
 }
-
 .form input {
   color: #fff;
   background: none;
   border: none;
   border-bottom: 1px white solid;
 }
-
 #caja-consulta {
   color: #fff;
   background: none;
   border: 5px white dotted;
   border-radius: 10%;
-  box-sizing: border-box;
 }
-
 #boton-contacto {
   background-color: rgb(190, 189, 189,0.3);
   border: 0;
   width: 30%;
   margin: auto;
 }
-
 .map {
   grid-area: map;
   width: 100%; /* width="400" en el html q me dio gmaps */
 }
 
+
 /* FOOTER */
 .footer {
+  grid-area: footer;
   background-color: rgb(190, 189, 189,0.5);
   display: flex;
   justify-content: center;
-  /* position: absolute;
-  bottom: 0;
-  width: 100%; */ /* antes del position no hacía falta */
   margin-top: 2%;
 }
+
 
 /* Media Query para distintas medidas */
 @media (max-width: 600px)
