@@ -157,6 +157,11 @@ nav {
 }
 
 /* Categorias */
+
+.categorias
+{
+  grid-area: categorias;
+}
 .cat {
   display: flex;
   flex-wrap: wrap;
@@ -166,18 +171,16 @@ nav {
 
 .wrap {
   margin: 2rem;
-
-  transform-style: preserve-3d;
-  transform: perspective(100rem);
-
+  /* transform-style: preserve-3d; */
+  /* transform: perspective(100rem); */
   cursor: pointer;
 }
 
 .container {
-  --rX: 0;
-  --rY: 0;
-  --bX: 40%;
-  --bY: 10%;
+  /* --rX: 0;
+  --rY: 0; */
+  /* --bX: 40%;
+  --bY: 10%; */
 
   width: 20rem;
   height: 30rem;
@@ -187,11 +190,10 @@ nav {
   padding: 2rem;
 
   display: flex;
-  align-items: flex-end;
-  /*Alinea nombre del recuadro*/
+  align-items: flex-end;  /*Alinea nombre del recuadro*/
   position: relative;
-  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-  transition: transform .6s 1s;
+  /* transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg)); */
+  /* transition: transform .6s 1s; */
 
   filter:opacity(65%);
 }
@@ -207,11 +209,8 @@ nav {
   position: absolute;
   z-index: 2;
   
-  opacity: 0.5;
-  transition: .3s;
-
-  
-
+  /* opacity: 0.5; */
+  transition: .8s;
 }
 
 .container::before {
@@ -232,9 +231,9 @@ nav {
 
 }
 
-.container--active {
-  transition: none;
-}
+/* .container--active {
+    transition: none; 
+} */
 
 .container:hover{
   filter: opacity(100%);
@@ -242,13 +241,15 @@ nav {
 .container--1
 {
   background:url("https://d3ugyf2ht6aenh.cloudfront.net/stores/001/053/068/products/img_00451-4e93884dba731428d516560065578173-1024-1024.jpg");
-  background-position: var(--bX) var(--bY);
+  /* background-position: var(--bX) var(--bY); */
+  background-position: 40% 10%;
   background-size: 120%;
 }
 
 .container--2{
   background:url("https://cdn.fashiola.mx/L571748422/rag-bone-pantalon-alex-en-color-baby-blue-talla-23-en-baby-blue-talla-23-tambien-en-24-25-26-27-28-29-30.jpg");
-  background-position: var(--bX) var(--bY);  
+  /* background-position: var(--bX) var(--bY);   */
+  background-position: 40% 10%;
   background-size: 100%;
 }
 
