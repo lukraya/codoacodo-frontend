@@ -38,8 +38,9 @@ body {
 }
 /* Nav */
 nav {
-  height: 80px;
-  width: 100%;
+  height: 5rem;
+  min-height: 15px;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,9 +142,11 @@ nav {
 #contenedor_carr {
   height: 200px;
   width: 1000px;
+  /* height: 12.5rem;
+  width: 62.5rem; */
+  
   margin: auto;
   overflow: hidden;
-  /* z-index: 0; */
 }
 
 .itemCarrousel {
@@ -188,7 +191,6 @@ nav {
 .ppal .cat
 {
   grid-area: cat;
-  /* grid-column: 1/3; */
 }
 .cat {
   display: flex;
@@ -199,19 +201,12 @@ nav {
 
 .wrap {
   margin: 2rem;
-  /* transform-style: preserve-3d; */
-  /* transform: perspective(100rem); */
   cursor: pointer;
 }
 
 .container {
-  /* --rX: 0;
-  --rY: 0; */
-  /* --bX: 40%;
-  --bY: 10%; */
-
-  width: 20rem;
-  height: 30rem;
+  width: 15rem;
+  height: 20rem;
   border: 1px solid white;
   border: 1px solid;
   border-radius: 1.6rem;
@@ -220,8 +215,7 @@ nav {
   display: flex;
   align-items: flex-end;  /*Alinea nombre del recuadro*/
   position: relative;
-  /* transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg)); */
-  /* transition: transform .6s 1s; */
+
 
   filter:opacity(65%);
 }
@@ -259,24 +253,30 @@ nav {
 
 }
 
-/* .container--active {
-    transition: none; 
-} */
-
 .container:hover{
   filter: opacity(100%);
 }
 .container--1
 {
   background:url("https://d3ugyf2ht6aenh.cloudfront.net/stores/001/053/068/products/img_00451-4e93884dba731428d516560065578173-1024-1024.jpg");
-  /* background-position: var(--bX) var(--bY); */
   background-position: 40% 10%;
   background-size: 120%;
 }
 
 .container--2{
   background:url("https://cdn.fashiola.mx/L571748422/rag-bone-pantalon-alex-en-color-baby-blue-talla-23-en-baby-blue-talla-23-tambien-en-24-25-26-27-28-29-30.jpg");
-  /* background-position: var(--bX) var(--bY);   */
+  background-position: 40% 10%;
+  background-size: 100%;
+}
+
+.container--3{
+  background:url("https://m.media-amazon.com/images/I/61QsX80M7pS._AC_UX385_.jpg");
+  background-position: 40% 10%;
+  background-size: 100%;
+}
+
+.container--4{
+  background:url("https://static.massimodutti.net/3/photos/2022/V/0/1/p/5213/819/712/5213819712_2_6_16.jpg");
   background-position: 40% 10%;
   background-size: 100%;
 }
@@ -374,22 +374,54 @@ nav {
   }
 } */
 
-/*Para dispositivos grandes pantallas notebooks*/
-@media (min-width: 992px) { 
-
-}
 
 /*Para dispositivos pequeños ej. celus*/
-@media (min-width: 576px) { 
+@media (max-width: 415px) { 
+  /* ver logo de la barra queda muy grande para mi pero me gustaria verlo en el celu primero  */
+  /* Barra nav */
+  .carrito{
+    display:none;
+  }
+  .nav-menu {
+ 
+    width: 100vw;
+  }
+  /* Ajustes del carrousel */
+  #contenedor_carr{
+    width:100vw;
+    height: 5.2rem;
+    overflow: hidden;
+  }
+  .tarjeta-carr > img{
+    width: 100vw;
+    height: 5.2rem;
+  } 
+  /* Ajustes categorias */
+  .wrap{
+    margin: 1rem;
+  }
+  .container {
+    width: 7.5rem;
+    height: 10rem;
+  }
+  .container > p{
+    visibility: hidden;
+  }
+  /* Distribución Grid */
+  .ppal{
+  background-color: aliceblue;
+   grid-template-areas: 
+                       'barra barra barra'
+                       'carru carru carru'
+                       'cat cat cat'
+                       'footind footind footind'
+   ;
+  }
+ }
+ 
 
-}
 
 /*Para dispositivos medianos ej. Tablets*/
 @media (min-width: 768px) {  
 
 }
-
-
-
-/*Para dispositivos XL ej. teles*/
-@media (min-width: 1200px) {  }
