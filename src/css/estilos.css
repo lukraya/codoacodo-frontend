@@ -18,24 +18,24 @@ body {
   background: linear-gradient(125deg, black, rgb(81, 80, 80));
 }
 
-.ppal{
+.ppal {
   display: grid;
-  
+
   grid-template-columns: repeat (3, 1fr);
   /* grid-template-rows: auto auto auto auto; */
   grid-template-areas: 'barra barra barra'
-  '. carru .'
-  '. punti .'
-  'cat cat cat'
-  'footind footind footind'
+    '. carru .'
+    '. punti .'
+    'cat cat cat'
+    'footind footind footind'
   ;
 }
 
 /* Barra navegación */
-.ppal .barra_nav
-{
-  grid-area: barra; 
+.ppal .barra_nav {
+  grid-area: barra;
 }
+
 /* Nav */
 nav {
   height: 5rem;
@@ -135,16 +135,17 @@ nav {
 }
 
 /*Carrousel del index*/
-.ppal .contenedor_carr{
+.ppal .contenedor_carr {
   grid-area: carru;
- 
+
 }
+
 #contenedor_carr {
   height: 200px;
   width: 1000px;
   /* height: 12.5rem;
   width: 62.5rem; */
-  
+
   margin: auto;
   overflow: hidden;
 }
@@ -182,16 +183,17 @@ nav {
   margin-right: 20px;
   color: rgba(165, 165, 165, 0.27);
 }
-.ppal .puntitos{
+
+.ppal .puntitos {
   grid-area: punti;
 }
 
 /* Categorias */
 
-.ppal .cat
-{
+.ppal .cat {
   grid-area: cat;
 }
+
 .cat {
   display: flex;
   flex-wrap: wrap;
@@ -213,24 +215,25 @@ nav {
   padding: 2rem;
 
   display: flex;
-  align-items: flex-end;  /*Alinea nombre del recuadro*/
+  align-items: flex-end;
+  /*Alinea nombre del recuadro*/
   position: relative;
 
 
-  filter:opacity(65%);
+  filter: opacity(65%);
 }
 
 .container::before,
 .container::after {
   content: "";
-  
+
   width: 2rem;
   height: 2rem;
   border: 1px solid rgb(63, 63, 63);
-  
+
   position: absolute;
   z-index: 2;
-  
+
   /* opacity: 0.5; */
   transition: .8s;
 }
@@ -238,7 +241,7 @@ nav {
 .container::before {
   top: 1rem;
   right: 1rem;
-  
+
   border-bottom-width: 0;
   border-left-width: 0;
 
@@ -247,36 +250,36 @@ nav {
 .container::after {
   bottom: 1rem;
   left: 1rem;
-  
+
   border-top-width: 0;
   border-right-width: 0;
 
 }
 
-.container:hover{
+.container:hover {
   filter: opacity(100%);
 }
-.container--1
-{
-  background:url("https://d3ugyf2ht6aenh.cloudfront.net/stores/001/053/068/products/img_00451-4e93884dba731428d516560065578173-1024-1024.jpg");
+
+.container--1 {
+  background: url("https://d3ugyf2ht6aenh.cloudfront.net/stores/001/053/068/products/img_00451-4e93884dba731428d516560065578173-1024-1024.jpg");
   background-position: 40% 10%;
   background-size: 120%;
 }
 
-.container--2{
-  background:url("https://cdn.fashiola.mx/L571748422/rag-bone-pantalon-alex-en-color-baby-blue-talla-23-en-baby-blue-talla-23-tambien-en-24-25-26-27-28-29-30.jpg");
+.container--2 {
+  background: url("https://cdn.fashiola.mx/L571748422/rag-bone-pantalon-alex-en-color-baby-blue-talla-23-en-baby-blue-talla-23-tambien-en-24-25-26-27-28-29-30.jpg");
   background-position: 40% 10%;
   background-size: 100%;
 }
 
-.container--3{
-  background:url("https://m.media-amazon.com/images/I/61QsX80M7pS._AC_UX385_.jpg");
+.container--3 {
+  background: url("https://m.media-amazon.com/images/I/61QsX80M7pS._AC_UX385_.jpg");
   background-position: 40% 10%;
   background-size: 100%;
 }
 
-.container--4{
-  background:url("https://static.massimodutti.net/3/photos/2022/V/0/1/p/5213/819/712/5213819712_2_6_16.jpg");
+.container--4 {
+  background: url("https://static.massimodutti.net/3/photos/2022/V/0/1/p/5213/819/712/5213819712_2_6_16.jpg");
   background-position: 40% 10%;
   background-size: 100%;
 }
@@ -291,7 +294,8 @@ nav {
 .wrap:hover .container::after {
   width: calc(100% - 2rem);
   /*Calc tener en cuenta para responsive */
-  height: calc(100% - 2rem);   /*Es 100%-2 por los 2 (1+1) q saco tanto en el after como el before*/
+  height: calc(100% - 2rem);
+  /*Es 100%-2 por los 2 (1+1) q saco tanto en el after como el before*/
 
 }
 
@@ -362,66 +366,294 @@ nav {
   margin-top: 2%;
 }
 
-.footindex{
+.footindex {
   grid-area: footind;
- }
-/* Media Query para distintas medidas */
+}
 
-/*Para dispositivos grandes pantallas notebooks*/
-/* @media (max-width: 600px) {
+/* Guia de talles */
+
+.contenedor_ppal {
+  width: 75rem;
+  position: relative;
+  top: -2rem;
+  left: 25%;
+}
+
+/* ¿Cómo medir busto? */
+.uno .frente_uno,
+.busto {
+  position: absolute;
+  width: 10rem;
+  height: 5rem;
+
+  border: 1px dotted white;
+  top: 17rem;
+  right: 25rem;
+
+  cursor: pointer;
+}
+
+.busto p {
+  visibility: hidden;
+}
+
+.uno .frente_uno {
+  background-color: aliceblue;
+  color: black;
+  text-align: center;
+  padding: 1rem;
+}
+
+.busto::before {
+  content: "";
+
+  position: absolute;
+  width: 1rem;
+  top: 50%;
+  right: 10rem;
+
+  border: 1px solid rgb(111, 150, 255);
+  background-color: aliceblue;
+
+  transition: .8s;
+  visibility: hidden;
+}
+
+.uno:hover .busto::before {
+  width: 12rem;
+  visibility: visible;
+  transform: rotateY(180deg);
+}
+
+.uno:hover p {
+  visibility: visible;
+
+}
+
+.uno:hover .frente_uno {
+  visibility: hidden;
+
+}
+
+/* ¿Cómo medir cintura? */
+
+.dos .frente_dos,
+.cintura {
+  position: absolute;
+  width: 10rem;
+  height: 5rem;
+
+  border: 1px dotted white;
+  top: 23rem;
+  right: 25rem;
+
+  cursor: pointer;
+}
+
+.cintura p {
+  visibility: hidden;
+}
+
+.dos .frente_dos {
+  background-color: aliceblue;
+  color: black;
+  text-align: center;
+  padding: 1rem;
+}
+
+.cintura::before {
+  content: "";
+  
+  position: absolute;
+  width: 1rem;
+  top: 50%;
+  right: 10rem;
+  
+  border: 1px solid rgb(111, 150, 255);
+  background-color: aliceblue;
+  
+  transition: .8s;
+  visibility: hidden;
+}
+
+.dos:hover .cintura::before {
+  width: 12rem;
+  visibility: visible;
+  transform: rotateY(180deg);
+}
+
+.dos:hover p {
+  visibility: visible;
+}
+
+.dos:hover .frente_dos {
+  visibility: hidden;
+}
+
+/* ¿Cómo medir la cadera? */
+.tres .frente_tres,
+.cadera {
+  position: absolute;
+  width: 10rem;
+  height: 6rem;
+
+  border: 1px dotted white;
+  top: 52rem;
+  left: 2rem;
+
+  cursor: pointer;
+}
+
+.cadera p {
+  visibility: hidden;
+}
+
+.tres .frente_tres {
+  background-color: aliceblue;
+  color: black;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.cadera::before {
+  content: "";
+
+  position: absolute;
+  width: 1rem;
+  top: 50%;
+  right: -13.5rem;
+
+  border: 1px solid rgb(111, 150, 255);
+  background-color: aliceblue;
+
+  transition: .8s;
+  visibility: hidden;
+}
+
+.tres:hover .cadera::before {
+  width: 13.5rem;
+  visibility: visible;
+  transform: rotateY(180deg);
+}
+
+.tres:hover p {
+  visibility: visible;
+
+}
+
+.tres:hover .frente_tres {
+  visibility: hidden;
+
+}
+
+/* ¿Cómo medir el largo de pierna? */
+.cuatro .frente_cuatro,
+.pierna {
+  position: absolute;
+  width: 10rem;
+  height: 8.5rem;
+
+  border: 1px dotted white;
+  top: 62rem;
+  left: 2rem;
+
+  cursor: pointer;
+}
+
+.pierna p {
+  visibility: hidden;
+}
+
+.cuatro .frente_cuatro {
+  background-color: aliceblue;
+  color: black;
+  text-align: center;
+  padding: 1.75rem;
+}
+
+.pierna::before {
+  content: "";
+
+  position: absolute;
+  width: 1rem;
+  top: 50%;
+  right: -13.5rem;
+
+  border: 1px solid rgb(111, 150, 255);
+  background-color: aliceblue;
+
+  transition: .8s;
+  visibility: hidden;
+}
+
+.cuatro:hover .pierna::before {
+  width: 13.5rem;
+  visibility: visible;
+  transform: rotateY(180deg);
+}
+
+.cuatro:hover p {
+  visibility: visible;
+
+}
+
+.cuatro:hover .frente_cuatro {
+  visibility: hidden;
+
+}
+/*Para dispositivos pequeños ej. celus*/
+@media (max-width: 415px) {
+
+  /* ver logo de la barra queda muy grande para mi pero me gustaria verlo en el celu primero  */
+  /* Barra nav */
   .carrito {
     display: none;
   }
-} */
 
-
-/*Para dispositivos pequeños ej. celus*/
-@media (max-width: 415px) { 
-  /* ver logo de la barra queda muy grande para mi pero me gustaria verlo en el celu primero  */
-  /* Barra nav */
-  .carrito{
-    display:none;
-  }
   .nav-menu {
- 
+
     width: 100vw;
   }
+
   /* Ajustes del carrousel */
-  #contenedor_carr{
-    width:100vw;
+  #contenedor_carr {
+    width: 100vw;
     height: 5.2rem;
     overflow: hidden;
   }
-  .tarjeta-carr > img{
+
+  .tarjeta-carr>img {
     width: 100vw;
     height: 5.2rem;
-  } 
+  }
+
   /* Ajustes categorias */
-  .wrap{
+  .wrap {
     margin: 1rem;
   }
+
   .container {
     width: 7.5rem;
     height: 10rem;
   }
-  .container > p{
+
+  .container>p {
     visibility: hidden;
   }
+
   /* Distribución Grid */
-  .ppal{
-  background-color: aliceblue;
-   grid-template-areas: 
-                       'barra barra barra'
-                       'carru carru carru'
-                       'cat cat cat'
-                       'footind footind footind'
-   ;
+  .ppal {
+    background-color: aliceblue;
+    grid-template-areas:
+      'barra barra barra'
+      'carru carru carru'
+      'cat cat cat'
+      'footind footind footind'
+    ;
   }
- }
- 
+}
+
 
 
 /*Para dispositivos medianos ej. Tablets*/
-@media (min-width: 768px) {  
-
-}
+@media (min-width: 768px) {}
