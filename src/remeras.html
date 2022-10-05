@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos_productos.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/21d5839768.js" crossorigin="anonymous"></script>	
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.js"></script>
+	<script src="js/script_cat.js"></script>
+    <script src="https://kit.fontawesome.com/21d5839768.js" crossorigin="anonymous"></script>
+    <title>Categorías</title>
+</head>
+
+<body>
+    <!-- Barra Navegación superior -->
+    <!-- Barra Navegación superior -->
+    <header>
+        <nav>
+
+            <!-- Barra de menu las tres lineas -->
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="remeras.html">Remeras</a></li>
+                <li><a href="guiat.html">Guía de talles</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">#</a></li>
+            </ul>
+            <!-- Barra de busqueda -->
+            <div class="buscar">
+                <input type="search" placeholder="¿Qué queres buscar?" required>
+                <div class="busca-btn">
+                    <i class="fa-solid fa-magnifying-glass icon"></i>
+                </div>
+            </div>
+
+            <!-- carrito -->
+            <div>
+                <a href="#" class="carrito">
+                    <div class="carrito-btn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Logo -->
+            <div>
+                <a href="index.html"><img src="img/OtroLogo.png" alt="" class="logo"></a>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="wrap">
+		<div class="store-wrapper">
+            
+            <!-- Menu -->
+            <div class="category_list">
+
+                <ul class="menu__links">
+                <li class="menu__item">
+                    <a href="#" class="category_item" category="all">Remeras</a>
+                </li>
+    
+                <li class="menu__item menu__item--show">
+                    <a href="#" class="menu__link" >  <img src="img\logo_menu.png" class="menu__arrow" >  Talles </a>
+    
+                    <ul class="menu__nesting">
+                        <li class="menu__inside">
+                            <a href="#" class="category_item" category="talle_s">Talle S</a>
+                        </li>
+                        <li class="menu__inside">
+                            <a href="#" class="category_item" category="talle_m">Talle M</a>
+                        </li>
+                        <li class="menu__inside">
+                            <a href="#" class="category_item" category="talle_l">Talle L</a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <li class="menu__item  menu__item--show">
+                    <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__arrow"> Tipo</a>
+    
+                    <ul class="menu__nesting">
+                        <li class="menu__inside">
+                            <a href="#" class="category_item" category="manga_corta">Manga Corta</a>
+                        </li>
+                        <li class="menu__inside">
+                            <a href="#" class="category_item" category="manga_larga">Manga Larga</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu__item  menu__item--show">
+                    <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__arrow"> Color</a>
+    
+                    <ul class="menu__nesting">
+                        <li class="menu__inside">
+                            <a href="#" class="category_item" category="color_rojo">Rojo</a>
+                        </li>
+                        <li class="menu__inside">
+                            <a href="#" class="category_item" category="color_negro">Negro</a>
+                        </li>
+                        <li class="menu__inside">
+                            <a href="#" class="category_item" category="color_blanco">Blanco</a>
+                        </li>
+                    </ul>
+                </li>
+    
+                 </ul>
+
+			
+			</div>
+
+            <!-- Productos -->
+			<section class="products-list">
+				<div class="product-item" category="talle_s">
+					<img src="img/talles_s.jpg" alt="" >
+					<a href="#">Talle S</a>
+				</div>
+				<div class="product-item" category="talle_m">
+					<img src="img/talles_m.jpg" alt="" >
+					<a href="#">Talle M</a>
+				</div>
+                <div class="product-item" category="talle_ls">
+                     <img src="img/talles_l.jpg" alt="" >
+                     <a href="#">Talle L</a>
+                </div>
+
+				<div class="product-item" category="manga_corta">
+					<img src="img/manga_corta.jpg" alt="" >
+					<a href="#">Manga Corta</a>
+				</div>
+				<div class="product-item" category="manga_larga">
+					<img src="img/manga_larga.jpg" alt="" >
+					<a href="#">Manga Larga</a>
+				</div>
+                
+				<div class="product-item" category="color_rojo">
+					<img src="img/color_rojo.jpg" alt="" >
+					<a href="#">Color Rojo</a>
+				</div>
+                <div class="product-item" category="color_negro">
+					<img src="img/color_negro.jpg" alt="" >
+					<a href="#">Color Negro</a>
+				</div>
+                <div class="product-item" category="color_blanco">
+					<img src="img/color_blanco.jpg" alt="" >
+					<a href="#">Color Blanco</a>
+				</div>
+			</section>
+		</div>
+	</div>
+
+
+    
+    <footer class="footer">Sitio realizado como proyecto para el curso de Programación Fullstack Python del programa
+        Codo a Codo</footer>
+</body>
+
+</html>
