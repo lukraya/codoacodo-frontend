@@ -8,11 +8,14 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  font-family: Montserrat, sans-serif; /* LU: poniendo en el body, no llega a inputs 
+    y otros elementos q la pisan con otras fuentes */
 }
 
 /* Body */
-body {
-  font-family: Montserrat, sans-serfi;
+body
+{
+  /* font-family: Montserrat, sans-serif; */
   color: white;
   width: 100%;
   background: linear-gradient(125deg, black, rgb(81, 80, 80));
@@ -127,13 +130,18 @@ nav {
   border-radius: 50%;
   cursor: pointer;
 }
-
 /* Carrito */
 .carrito-btn {
   color: white;
   font-size: 20px;
 }
 
+/* Posicionamiento contenido principal */
+.main {
+  grid-area: main;
+}
+
+/* Index */
 /*Carrousel del index*/
 .ppal .contenedor_carr {
   grid-area: carru;
@@ -301,68 +309,72 @@ nav {
 
 /* CONTACTO */
 .contacto {
-  /* Need a font, and make it bigger */
-  /* height: 100%; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   display: grid;
   grid-template-areas:
     "titulo titulo titulo titulo"
     ". form form ."
     ". map map .";
 }
-
 .contacto-titulo {
   margin: 2%;
   grid-area: titulo;
   text-align: center;
 }
-
 .form {
   grid-area: form;
 }
-
 .form-group {
   display: flex;
   justify-content: space-evenly;
 }
-
 .form-item {
   display: flex;
   flex-direction: column;
   margin-bottom: 5%;
 }
-
 .form-item-center {
   width: 70%;
   margin: auto;
   margin-bottom: 5%;
 }
-
 .form-label {
   margin-bottom: 3%;
 }
-
-/* #boton-contacto {
-  margin-top: 5%;
-} */
-
+.form input {
+  color: #fff;
+  background: none;
+  border: none;
+  border-bottom: 1px white solid;
+}
+#caja-consulta {
+  color: #fff;
+  background: none;
+  border: 5px white dotted;
+  border-radius: 10%;
+}
+#boton-contacto {
+  background-color: rgb(190, 189, 189,0.3);
+  border: 0;
+  width: 30%;
+  margin: auto;
+}
+#boton-contacto:hover {
+  background-color: rgb(190, 189, 189);
+  cursor: pointer;
+}
 .map {
   grid-area: map;
   width: 100%;
   /* width="400" en el html q me dio gmaps */
 }
 
+
 /* FOOTER */
 .footer {
-  background-color: rgb(190, 189, 189, 0.5);
+  grid-area: footer;
+  background-color: rgb(190, 189, 189,0.5);
   display: flex;
   justify-content: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  /* antes del position no hacía falta */
   margin-top: 2%;
 }
 
