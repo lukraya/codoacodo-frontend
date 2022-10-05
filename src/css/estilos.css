@@ -15,29 +15,55 @@
 /* Body */
 body
 {
-  /* font-family: Montserrat, sans-serif; */
   color: white;
-  width: 100%;
+  /* width: 100%; */
+  overflow-x: hidden; /* LU: Sin esto aparece un scroll horizontal, considerado muy desprolijo. Probé max-width: 100vw,
+  que antes andaba pero ahora no */
+  min-height: 100vh; /* LU: esto da height (para maqueteado) pero si se extiende el contenido (scroll), no pasa nada */
   background: linear-gradient(125deg, black, rgb(81, 80, 80));
+  /* LU: nueva solución al maqueteado general del sitio: */
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: max-content auto max-content;
 }
 
-.ppal {
+/* LU: Posicionamiento de HEADER para todo el sitio*/
+.header {
+  grid-area: header;
+}
+
+/* LU: reemplazo "ppal" por "index-ppal" y la adapto para aplicarla al elemento main.
+Todo para mantener la estructura header-main-footer en todo el sitio */
+.index-ppal {
+  /* LU: así como lo dejé, no estoy segura de que haga falta el grid, para este tamaño de pantalla. 
+  Me parece que el orden vertical de  "carousel->puntitos->categorías" ya se lo dan los elementos, 
+  divs y section, xq son de bloque */
   display: grid;
 
-  grid-template-columns: repeat (3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   /* grid-template-rows: auto auto auto auto; */
-  grid-template-areas: 'barra barra barra'
+
+  /* LU: dejo machete del grid como era */
+  /* grid-template-areas: 'barra barra barra'
     '. carru .'
     '. punti .'
     'cat cat cat'
     'footind footind footind'
-  ;
+  ; */
+  grid-template-areas: '. carru .'
+    '. punti .'
+    'cat cat cat';
 }
 
 /* Barra navegación */
-.ppal .barra_nav {
+/* LU: pregunta: por qué las dos clases? Esto significa los elementos con class "barra_nav" q estén 
+dentro de elementos con class "index-ppal", si no me equivoco. No bastaría con poner la segunda clase nada más? */
+/* .index-ppal .barra_nav {
   grid-area: barra;
-}
+} */
 
 /* Nav */
 nav {
@@ -143,11 +169,11 @@ nav {
 
 /* Index */
 /*Carrousel del index*/
-.ppal .contenedor_carr {
+.index-ppal .contenedor_carr {
   grid-area: carru;
-
 }
 
+/* LU: no sé si es buena idea tener una clase y un id con el mismo nombre */
 #contenedor_carr {
   height: 200px;
   width: 1000px;
@@ -192,13 +218,13 @@ nav {
   color: rgba(165, 165, 165, 0.27);
 }
 
-.ppal .puntitos {
+.index-ppal .puntitos {
   grid-area: punti;
 }
 
 /* Categorias */
 
-.ppal .cat {
+.index-ppal .cat {
   grid-area: cat;
 }
 
@@ -209,6 +235,8 @@ nav {
   align-items: center;
 }
 
+/* LU: esto lo marqué en estilos_productos, donde se repite la clase, pero además de cambiar esa creo que si
+la clase es para utilizar en una sola página, usar nombres menos genéricos */
 .wrap {
   margin: 2rem;
   cursor: pointer;
@@ -378,12 +406,13 @@ nav {
   margin-top: 2%;
 }
 
-.footindex {
+/* LU: desactivo */
+/* .footindex {
   grid-area: footind;
-}
+} */
 
 /* Guia de talles */
-
+/* LU: queda cortado por el overflow-x del body, pero de todas formas no debería crear scroll horizontal */
 .contenedor_ppal {
   width: 75rem;
   position: relative;
@@ -654,14 +683,25 @@ nav {
   }
 
   /* Distribución Grid */
-  .ppal {
+  .index-ppal {
+    /* LU: acá veo que va a haber lío, porque el cambio de color era para toda la vista, no?
+    Habría que pasarlo a una clase y aplicarla al body en este tamaño, y en todos los html */
     background-color: aliceblue;
-    grid-template-areas:
+    /* grid-template-areas:
       'barra barra barra'
       'carru carru carru'
       'cat cat cat'
       'footind footind footind'
+    ; */
+    grid-template-areas:
+      'carru carru carru'
+      'cat cat cat'
     ;
+    /* LU: me sigue apareciendo "puntitos" con cualquiera de los dos opciones de grid */
+  }
+  /* LU: agrego esto para q no rompa el grid */
+  #puntitos {
+    display: none;
   }
 }
 

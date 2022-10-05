@@ -1,12 +1,15 @@
 /* Estilos utilizados para mostrar productos */
 
+/* LU: fijate que en estilos.css ya hay una clase con ese nombre, podría ser wrap-store. Aunque veo que
+dentro del elemento con esta clase tenés otro div con "store-wrapper", no sé qué las diferencia/separa */
 .wrap{
+	/* LU: me parecería bueno evitar medidas absolutas, aunque acá está con max-width. Más fácil que sea responsivo*/
 	max-width: 1100px;
 	width: 90%;
 	margin: auto;
 }
 
-
+/* LU: se podría hacer el espaciado entre los items con un justify-content en lugar de márgenes? */
 .products-list{
 	width: 82%;
 	display: flex;
@@ -108,7 +111,8 @@
 		margin-left: 0px;
 	}
 }
-
+/* LU: acá terminan las instrucciones de responsive? Es un poco maña, pero también por la legibilidad del css
+me parece mejor poner los media queries al final de todo; creo que es una práctica común */
 
 .store-wrapper{
 	display: flex;
