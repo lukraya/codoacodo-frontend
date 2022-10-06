@@ -2,59 +2,109 @@
 .contacto {
     display: grid;
     grid-template-areas:
-      "titulo titulo titulo titulo"
-      ". form form ."
-      ". map map .";
-  }
-  .contacto-titulo {
+        "titulo titulo titulo titulo"
+        ". form form ."
+        ". map map .";
+}
+
+.contacto-titulo {
     margin: 2%;
     grid-area: titulo;
     text-align: center;
-  }
-  .form {
+}
+
+.form {
     grid-area: form;
-  }
-  .form-group {
+}
+
+.form-group {
     display: flex;
     justify-content: space-evenly;
-  }
-  .form-item {
+}
+
+.form-item {
     display: flex;
     flex-direction: column;
     margin-bottom: 5%;
-  }
-  .form-item-center {
+}
+
+.form-item-center {
     width: 70%;
     margin: auto;
     margin-bottom: 5%;
-  }
-  .form-label {
+}
+
+.form-label {
     margin-bottom: 3%;
-  }
-  .form input {
+}
+
+.form input {
     color: #fff;
     background: none;
     border: none;
     border-bottom: 1px white solid;
-  }
-  #caja-consulta {
+}
+
+#caja-consulta {
     color: #fff;
     background: none;
     border: 5px white dotted;
     border-radius: 10%;
-  }
-  #boton-contacto {
-    background-color: rgb(190, 189, 189,0.3);
+}
+
+#boton-contacto {
+    background-color: rgb(190, 189, 189, 0.3);
     border: 0;
     width: 30%;
     margin: auto;
-  }
-  #boton-contacto:hover {
+}
+
+#boton-contacto:hover {
     background-color: rgb(190, 189, 189);
     cursor: pointer;
-  }
-  .map {
+}
+
+.map {
     grid-area: map;
     width: 100%;
     /* width="400" en el html q me dio gmaps */
-  }
+}
+
+
+/*Para dispositivos pequeños ej. celus*/
+/* Cita de MDN: Media types define the broad category of device for which the media query applies: 
+all, print, screen. The type is optional (assumed to be all) except when using the not or only logical operators. */
+@media only screen and (max-width: 415px) {
+    .contacto-titulo {
+        font-size: 1.2rem;
+    }
+
+    .form {
+        font-size: 0.9rem;
+    }
+
+    .form-group {
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+    }
+
+    .form-item-center {
+        width: 75%;
+    }
+
+    .map {
+        height: auto;
+    }
+}
+
+/*Para dispositivos medianos ej. Tablets*/
+@media only screen and (max-width: 768px) {
+    .contacto-titulo {
+        font-size: 1.4rem;
+    }
+
+    .form-item-left {
+        margin-right: 1%;
+    }
+}

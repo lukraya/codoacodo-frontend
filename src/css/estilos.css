@@ -12,20 +12,20 @@
 }
 
 /* Body */
-body
-{
+body {
   color: white;
   width: 100%;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   /* LU: Sin esto aparece un scroll horizontal, considerado muy desprolijo. Probé max-width: 100vw,
   que antes andaba pero ahora no */
   /*Eri: a mi no me sale el scroll horizontal si no lo saco solo sale cuando achico la pantalla del navegador mas 
   chica de lo que es al 100%--- no se si me explico bien*/
-  min-height: 100vh; /* LU: esto da height (para maqueteado) pero si se extiende el contenido (scroll), no pasa nada */
+  min-height: 100vh;
+  /* LU: esto da height (para maqueteado) pero si se extiende el contenido (scroll), no pasa nada */
   background: linear-gradient(125deg, black, rgb(81, 80, 80));
   /* LU: nueva solución al maqueteado general del sitio: */
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "header"
     "main"
     "footer";
@@ -153,6 +153,7 @@ nav {
   border-radius: 50%;
   cursor: pointer;
 }
+
 /* Carrito */
 .carrito-btn {
   color: white;
@@ -430,15 +431,15 @@ andaría  */
 
 .cintura::before {
   content: "";
-  
+
   position: absolute;
   width: 1rem;
   top: 50%;
   right: 10rem;
-  
+
   border: 1px solid rgb(111, 150, 255);
   background-color: aliceblue;
-  
+
   transition: .8s;
   visibility: hidden;
 }
@@ -572,15 +573,22 @@ andaría  */
 /* FOOTER */
 .footer {
   grid-area: footer;
-  background-color: rgb(190, 189, 189,0.5);
-  display: flex;
-  justify-content: center;
+  background-color: rgb(190, 189, 189, 0.5);
+  /* display: flex;
+  justify-content: center; */
   margin-top: 2%;
+  font-size: 0.8rem;
+  padding: 0 3%;
+  text-align: center;
 }
 
 
 /*Para dispositivos pequeños ej. celus*/
 @media (max-width: 415px) {
+  .footer {
+    font-size: 0.6rem;
+    margin-top: 4%;
+  }
 
   /* ver logo de la barra queda muy grande para mi pero me gustaria verlo en el celu primero  */
   /* Barra nav */
@@ -636,6 +644,7 @@ andaría  */
     ;
     /* LU: me sigue apareciendo "puntitos" con cualquiera de los dos opciones de grid */
   }
+
   /* LU: agrego esto para q no rompa el grid */
   #puntitos {
     display: none;
@@ -644,5 +653,5 @@ andaría  */
 
 
 /*Para dispositivos medianos ej. Tablets*/
-@media (min-width: 768px) {}
-
+/* LU: lo cambié a max */
+@media (max-width: 768px) {}
