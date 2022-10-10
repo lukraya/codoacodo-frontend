@@ -10,15 +10,11 @@
     <script src="https://kit.fontawesome.com/21d5839768.js" crossorigin="anonymous"></script>
 </head>
 
-<!-- contenedor principal -->
-<!-- <div class="ppal"> -->
 
 <body>
-    <!-- LU: inserto class "header" para maqueteado de todo el sitio; saco "barra_nav" -->
-    <header class="header">
-        <!-- Barra Navegación superior -->
+    <!-- Barra Navegación superior -->
+      <header class="header">
         <nav>
-
             <!-- Barra de menu las tres lineas -->
             <input type="checkbox" id="check">
             <label for="check" class="bar-btn">
@@ -31,6 +27,7 @@
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="#">#</a></li>
             </ul>
+
             <!-- Barra de busqueda -->
             <div class="buscar">
                 <input type="search" placeholder="¿Qué queres buscar?" required>
@@ -52,53 +49,28 @@
             <div>
                 <a href="index.html"><img src="img/OtroLogo.png" alt="" class="logo"></a>
             </div>
-
         </nav>
     </header>
-    <!-- LU: inserto un main con class "main" para maqueteado de todo el sitio. Reemplazo "ppal" por "index-ppal" -->
+    
     <main class="main index-ppal">
+        
         <!-- Div contenedor del carrousel -->
-        <div class="contenedor_carr" id="contenedor_carr">
-            <!-- Item carrousel 1 -->
-            <div class="itemCarrousel" id="i-1">
-                <!-- Tarjeta carrousel 1 -->
-                <div class="tarjeta-carr" id="t-c-1">
-                    <img src="img/C1.gif" alt="oferta 35%off">
-                </div>
-                <div class="flechas-carr">
-                    <a href="#i-3"><i class="fa-solid fa-chevron-left"></i></i></a>
-                    <a href="#i-2"><i class="fa-solid fa-chevron-right"></i></a>
-                </div>
+        <div class="carrousel">
+            
+            <div class="grande">
+                <img src="img/C1.gif" alt="Imagen 1" class="img">
+                <img src="img/C2.gif" alt="Imagen 2" class="img">
+                <img src="img/C3.gif" alt="Imagen 3" class="img">
             </div>
+    
+            <ul class="puntos">
+                <li class="punto activo"></li>
+                <li class="punto"></li>
+                <li class="punto"></li>
+            </ul>
+        </div>
+        <script src="js/carrusel.js"></script>
 
-            <!-- Item carrousel 2 -->
-            <div class="itemCarrousel" id="i-2">
-                <!-- Tarjeta carrousel 2 -->
-                <div class="tarjeta-carr" id="t-c-2">
-                    <img src="img/C2.gif" alt="oferta 35%off">
-                </div>
-                <div class="flechas-carr">
-                    <a href="#i-1"><i class="fa-solid fa-chevron-left"></i></a>
-                    <a href="#i-3"><i class="fa-solid fa-chevron-right"></i></i></a>
-                </div>
-            </div>
-            <!-- Item carrousel 3 -->
-            <div class="itemCarrousel" id="i-3">
-                <!-- Tarjeta carrousel 3 -->
-                <div class="tarjeta-carr" id="t-c-3">
-                    <img src="img/C3.gif" alt="oferta 35%off">
-                </div>
-                <div class="flechas-carr">
-                    <a href="#i-2"><i class="fa-solid fa-chevron-left"></i></a>
-                    <a href="#i-1"><i class="fa-solid fa-chevron-right"></i></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="puntitos" id="puntitos">
-            <a href="#i-1"> <i class="fa-solid fa-circle"></i> </a>
-            <a href="#i-2"> <i class="fa-solid fa-circle"></i> </a>
-            <a href="#i-3"> <i class="fa-solid fa-circle"></i> </a>
-        </div>
         <!-- Div para las categorias  -->
         <section class="cat">
             <div class="wrap wrap--1">
@@ -121,10 +93,9 @@
                     <p>Faldas</p>
                 </div>
             </div>
-            <!-- <script src="js/script_index.js"></script>  -->
         </section>
     </main>
-    <!-- LU: "footindex" class sacada del footer -->
+
     <footer class="footer"> Sitio realizado como proyecto para el curso de Programación Fullstack Python del
         programa Codo a Codo
     </footer>

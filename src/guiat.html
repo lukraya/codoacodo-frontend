@@ -9,13 +9,10 @@
     <link rel="stylesheet" href="css/estilos.css">
     <script src="https://kit.fontawesome.com/21d5839768.js" crossorigin="anonymous"></script>
 </head>
-<!-- contenedor principal -->
-<!-- <div> -->
 
 <body>
-
+    <!-- Barra Navegación superior -->
     <header class="header">
-        <!-- Barra Navegación superior -->
         <nav>
             <!-- Barra de menu las tres lineas -->
             <input type="checkbox" id="check">
@@ -23,12 +20,13 @@
                 <i class="fa-solid fa-bars"></i>
             </label>
             <ul class="nav-menu">
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">Categoria 1</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="remeras.html">Remeras</a></li>
                 <li><a href="guiat.html">Guía de talles</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="#">#</a></li>
             </ul>
+
             <!-- Barra de busqueda -->
             <div class="buscar">
                 <input type="search" placeholder="¿Qué queres buscar?" required>
@@ -50,57 +48,64 @@
             <div>
                 <a href="index.html"><img src="img/OtroLogo.png" alt="" class="logo"></a>
             </div>
-
         </nav>
     </header>
-    <!-- LU: cambio div por main y agrego class main -->
-    <main class=" main contenedor_ppal">
-        <div class="contenedor_imagen">
-            <img src="img/talle2.png" alt="guia talles">
-        </div>
-        <!-- LU: cambiaría el nombre de las clases a algo más representativo, por ej: busto>busto_frente>busto_detras -->
-        <div class="uno">
-            <div class="frente_uno">
-                <p>¿Cómo medir el busto?</p>
-            </div>
-            <div class="busto">
-                <p>Medir debajo de los brazos, alrededor de la parte más amplia del pecho.</p>
-            </div>
-        </div>
-        <div class="dos">
-            <div class="frente_dos">
-                <p> ¿Cómo medir la cintura?</p>
-            </div>
-            <div class="cintura">
-                <p>Medir alrededor de la cintura, dejando el centímetro un poco flojo.</p>
-            </div>
-        </div>
 
-        <div class="tres">
-            <div class="frente_tres">
-                <p>¿Cómo medir la cadera?</p>
+
+    <main class="main talles_ppal">
+        <div class="contenedor_talles">
+            <img src="img/talle2-1.png" alt="" class="talles_imagen">
+            <div class="flip_card_busto">
+                <div class="flip_card_inner busto">
+                    <div class="flip_card_frente busto_frente">
+                        <p>¿Cómo medir <br>el busto?</p>
+                    </div>
+                    <div class="flip_card_back busto_back">
+                        <p>Medir debajo de los brazos, alrededor de la parte más amplia del pecho.</p>
+                    </div>
+                </div>
             </div>
-            <div class="cadera">
-                <p>Medir alrededor de la parte más amplia del cuerpo en la parte superior de la pierna</p>
+            <div class="flip_card_cintura">
+                <div class="flip_card_inner cintura">
+                    <div class="flip_card_frente cintura_frente">
+                        <p>¿Cómo medir <br>la cintura?</p>
+                    </div>
+                    <div class="flip_card_back cintura_back">
+                        <p>Medir alrededor de la cintura, dejando el centímetro un poco flojo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip_card_cadera">
+                <div class="flip_card_inner cadera">
+                    <div class="flip_card_frente cadera_frente">
+                        <p>Cómo medir la<br>cadera? </p>
+                    </div>
+                    <div class="flip_card_back cadera_back">
+                        <p>Medir alrededor de la parte más amplia del cuerpo en la parte superior de la pierna</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip_card_pierna">
+                <div class="flip_card_inner pierna">
+                    <div class="flip_card_frente pierna_frente">
+                        <p>¿Cómo medir el largo<br> de las piernas?</p>
+                    </div>
+                    <div class="flip_card_back pierna_back">
+                        <p>Usando unos pantalos que te queden bien, medir desde la entrepierna hasta la parte inferior de la pierna</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="cuatro">
-            <div class="frente_cuatro">
-                <p>¿Cómo medir el largo de las piernas?</p>
-            </div>
-            <div class="pierna">
-                <p>Usando unos pantalos que te queden bien, medir desde la entrepierna hasta la parte inferior de la
-                    pierna</p>
-            </div>
-        </div>
+        <img src="img/TALLE3.png" alt="" class="tabla_talles">
+
+
     </main>
 
-    <!-- LU: saco class "footguia" -->
+
     <footer class="footer"> Sitio realizado como proyecto para el curso de Programación Fullstack Python del
         programa Codo a Codo
     </footer>
-</body>
 
-<!-- </div> -->
+</body>
 
 </html>
