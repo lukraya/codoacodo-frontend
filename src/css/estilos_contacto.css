@@ -5,6 +5,8 @@
         "titulo titulo titulo titulo"
         ". form form ."
         ". map map .";
+
+    padding-bottom: 2%;
 }
 
 .contacto-titulo {
@@ -71,10 +73,45 @@
 }
 
 
-/*Para dispositivos pequeños ej. celus*/
 /* Cita de MDN: Media types define the broad category of device for which the media query applies: 
 all, print, screen. The type is optional (assumed to be all) except when using the not or only logical operators. */
+
+/*Para dispositivos medianos ej. Tablets*/
+@media only screen and (max-width: 768px) {
+    .contacto {
+        color: rgb(72, 72, 72);
+    }
+
+    .contacto-titulo {
+        font-size: 1.4rem;
+    }
+
+    .form-item-left {
+        margin-right: 1%;
+    }
+
+    .form input {
+        color: rgb(72, 72, 72);
+        border-bottom: 1px rgb(72, 72, 72) solid;
+    }
+
+    #caja-consulta {
+        color: rgb(72, 72, 72);
+        border: 5px rgb(72, 72, 72) dotted;
+    }
+
+    #boton-contacto {
+        background-color: rgb(72, 72, 72);
+        color: white;
+    }
+}
+
+/*Para dispositivos pequeños ej. celus*/
 @media only screen and (max-width: 415px) {
+    .contacto {
+        padding-bottom: 4%;
+    }
+
     .contacto-titulo {
         font-size: 1.2rem;
     }
@@ -95,16 +132,5 @@ all, print, screen. The type is optional (assumed to be all) except when using t
 
     .map {
         height: auto;
-    }
-}
-
-/*Para dispositivos medianos ej. Tablets*/
-@media only screen and (max-width: 768px) {
-    .contacto-titulo {
-        font-size: 1.4rem;
-    }
-
-    .form-item-left {
-        margin-right: 1%;
     }
 }
