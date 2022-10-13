@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remeras</title>
+    <title>Alta Pinta - Remeras</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/estilos_productos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
@@ -18,7 +18,6 @@
     <header>
         <!-- Barra Navegación superior -->
         <nav>
-
             <!-- Barra de menu las tres lineas -->
             <input type="checkbox" id="check">
             <label for="check" class="bar-btn">
@@ -27,9 +26,12 @@
             <ul class="nav-menu">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="remeras.html">Remeras</a></li>
+                <li><a href="pantalones.html">Pantalones</a></li>
+                <li><a href="vestidos.html">Vestidos</a></li>
+                <li><a href="faldas.html">Faldas</a></li>
                 <li><a href="guiat.html">Guía de talles</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="#">#</a></li>
+                <!-- <li><a href="#">#</a></li> -->
             </ul>
             <!-- Barra de busqueda -->
             <div class="buscar">
@@ -60,12 +62,12 @@
     usemos etiquetas semánticas.
     Se rompe un poco la posición del footer al pie de la página, sospecho q por los submenúes, particularmente
     el de color (rojo, negro, blanco), pero eso ya no lo quiero tocar por miedo a romper -->
+
     <main class="wrap">
         <div class="store-wrapper">
 
             <!-- Menu -->
-            <!-- LU: esto tal vez podría ser un elemento aside -->
-            <div class="category_list">
+            <aside class="category_list">
 
                 <ul class="menu__links">
                     <li class="menu__item">
@@ -73,7 +75,7 @@
                     </li>
 
                     <li class="menu__item menu__item--show">
-                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__arrow"> Talles </a>
+                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> Talles </a>
 
                         <ul class="menu__nesting">
                             <li class="menu__inside">
@@ -89,7 +91,7 @@
                     </li>
 
                     <li class="menu__item  menu__item--show">
-                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__arrow"> Tipo</a>
+                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> Tipo</a>
 
                         <ul class="menu__nesting">
                             <li class="menu__inside">
@@ -102,7 +104,7 @@
                     </li>
 
                     <li class="menu__item  menu__item--show">
-                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__arrow"> Color</a>
+                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> Color</a>
 
                         <ul class="menu__nesting">
                             <li class="menu__inside">
@@ -120,42 +122,42 @@
                 </ul>
 
 
-            </div>
+            </aside>
 
             <!-- Productos -->
             <section class="products-list">
                 <div class="product-item" category="talle_s">
-                    <img src="img/talles_s.jpg" alt="">
+                    <img src="img/remeras/talles_s.jpg" alt="">
                     <a href="#">Talle S</a>
                 </div>
                 <div class="product-item" category="talle_m">
-                    <img src="img/talles_m.jpg" alt="">
+                    <img src="img/remeras/talles_m.jpg" alt="">
                     <a href="#">Talle M</a>
                 </div>
                 <div class="product-item" category="talle_ls">
-                    <img src="img/talles_l.jpg" alt="">
+                    <img src="img/remeras/talles_l.jpg" alt="">
                     <a href="#">Talle L</a>
                 </div>
 
                 <div class="product-item" category="manga_corta">
-                    <img src="img/manga_corta.jpg" alt="">
+                    <img src="img/remeras/manga_corta.jpg" alt="">
                     <a href="#">Manga Corta</a>
                 </div>
                 <div class="product-item" category="manga_larga">
-                    <img src="img/manga_larga.jpg" alt="">
+                    <img src="img/remeras/manga_larga.jpg" alt="">
                     <a href="#">Manga Larga</a>
                 </div>
 
                 <div class="product-item" category="color_rojo">
-                    <img src="img/color_rojo.jpg" alt="">
+                    <img src="img/remeras/color_rojo.jpg" alt="">
                     <a href="#">Color Rojo</a>
                 </div>
                 <div class="product-item" category="color_negro">
-                    <img src="img/color_negro.jpg" alt="">
+                    <img src="img/remeras/color_negro.jpg" alt="">
                     <a href="#">Color Negro</a>
                 </div>
                 <div class="product-item" category="color_blanco">
-                    <img src="img/color_blanco.jpg" alt="">
+                    <img src="img/remeras/color_blanco.jpg" alt="">
                     <a href="#">Color Blanco</a>
                 </div>
             </section>
