@@ -76,6 +76,29 @@
 /* Cita de MDN: Media types define the broad category of device for which the media query applies: 
 all, print, screen. The type is optional (assumed to be all) except when using the not or only logical operators. */
 
+@media only screen and (min-width: 769px) {
+    form input:focus-visible {
+        /* Cambia el tamaño de las cosas al hacer focus pero no por el extra borde, siendo que está box-sizing en 
+        todo el doc; debe venir de flex y/o márgenes responsivos */
+        /* En Mozilla por default aparece un outline blanco y azul */
+        outline: white solid 1px;
+        border: none;
+    }
+
+    /* Código que tuve que sacar de internet para que el autofill no me ponga fondo blanco y letra negra */
+    form input:-webkit-autofill,
+    form input:-webkit-autofill:hover,
+    form input:-webkit-autofill:focus,
+    form input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s !important;
+        -webkit-text-fill-color: white !important;
+    }
+
+    #caja-consulta:focus-visible {
+        outline: white solid 2px;
+    }
+}
+
 /*Para dispositivos medianos ej. Tablets*/
 @media only screen and (max-width: 768px) {
     .contacto {
@@ -95,15 +118,31 @@ all, print, screen. The type is optional (assumed to be all) except when using t
         border-bottom: 1px rgb(72, 72, 72) solid;
     }
 
+    form input:focus-visible {
+        outline: black solid 1px;
+        border: none;
+    }
+
+    form input:-webkit-autofill,
+    form input:-webkit-autofill:hover,
+    form input:-webkit-autofill:focus,
+    form input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s !important;
+    }
+
     #caja-consulta {
         color: rgb(72, 72, 72);
         border: 5px rgb(72, 72, 72) dotted;
     }
 
-    #boton-contacto {
-        background-color: rgb(72, 72, 72);
-        color: white;
+    #caja-consulta:focus-visible {
+        outline: black solid 2px;
     }
+}
+
+#boton-contacto {
+    background-color: rgb(72, 72, 72);
+    color: white;
 }
 
 /*Para dispositivos pequeños ej. celus*/
