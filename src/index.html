@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Alta Pinta - Bienvenido</title>
     <link rel="stylesheet" href="css/estilos.css">
     <script src="https://kit.fontawesome.com/21d5839768.js" crossorigin="anonymous"></script>
 </head>
@@ -13,7 +13,7 @@
 
 <body>
     <!-- Barra Navegación superior -->
-      <header class="header">
+    <header class="header">
         <nav>
             <!-- Barra de menu las tres lineas -->
             <input type="checkbox" id="check">
@@ -23,9 +23,12 @@
             <ul class="nav-menu">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="remeras.html">Remeras</a></li>
+                <li><a href="pantalones.html">Pantalones</a></li>
+                <li><a href="vestidos.html">Vestidos</a></li>
+                <li><a href="faldas.html">Faldas</a></li>
                 <li><a href="guiat.html">Guía de talles</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="#">#</a></li>
+                <!-- <li><a href="#">#</a></li> -->
             </ul>
 
             <!-- Barra de busqueda -->
@@ -51,18 +54,18 @@
             </div>
         </nav>
     </header>
-    
+
     <main class="main index-ppal">
-        
+
         <!-- Div contenedor del carrousel -->
         <div class="carrousel">
-            
+
             <div class="grande">
                 <img src="img/C1.gif" alt="Imagen 1" class="img">
                 <img src="img/C2.gif" alt="Imagen 2" class="img">
                 <img src="img/C3.gif" alt="Imagen 3" class="img">
             </div>
-    
+
             <ul class="puntos">
                 <li class="punto activo"></li>
                 <li class="punto"></li>
@@ -73,26 +76,34 @@
 
         <!-- Div para las categorias  -->
         <section class="cat">
-            <div class="wrap wrap--1">
-                <div class="container container--1">
-                    <p>Remeras</p>
+            <a id="link" href="remeras.html">
+                <div class="wrap wrap--1">
+                    <div class="container container--1">
+                        <p>Remeras</p>
+                    </div>
                 </div>
-            </div>
-            <div class="wrap wrap--2">
-                <div class="container container--2">
-                    <p>Pantalones</p>
+            </a>
+            <a id="link" href="pantalones.html">
+                <div class="wrap wrap--2">
+                    <div class="container container--2">
+                        <p>Pantalones</p>
+                    </div>
                 </div>
-            </div>
-            <div class="wrap wrap--3">
-                <div class="container container--3">
-                    <p>Vestidos</p>
+            </a>
+            <a id="link" href="vestidos.html">
+                <div class="wrap wrap--3">
+                    <div class="container container--3">
+                        <p>Vestidos</p>
+                    </div>
                 </div>
-            </div>
-            <div class="wrap wrap--4">
-                <div class="container container--4">
-                    <p>Faldas</p>
+            </a>
+            <a id="link" href="faldas.html">
+                <div class="wrap wrap--4">
+                    <div class="container container--4">
+                        <p>Faldas</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </section>
     </main>
 
