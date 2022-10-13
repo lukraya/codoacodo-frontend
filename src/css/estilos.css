@@ -73,7 +73,7 @@ nav {
 }
 
 .nav-menu {
-    position: fixed;
+    position: absolute;
     width: 17%;
     height: 0vh;
     top: 5rem;
@@ -214,6 +214,11 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.cat a{
+    text-decoration: none;
+    color: transparent;
 }
 
 .wrap {
