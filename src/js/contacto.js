@@ -64,14 +64,3 @@ let validarSubmit = e => {
 }
 
 form.addEventListener('submit', validarSubmit)
-
-
-/* TEST FAKE STORE API */
-//electronics, jewelery (4), men's(4, varied), women's (3 t-shirts 3jackets)
-
-/* let getProducts = async () => {
-    let response = await fetch("https://fakestoreapi.com/products/category/women's%20clothing")
-    let result = await response.json()
-    console.log(result)
-}
-getProducts() */

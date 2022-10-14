@@ -1,0 +1,29 @@
+.accesorios {
+    display: grid;
+    grid-template-areas:
+        'list container';
+    grid-template-columns: 1fr 2fr;
+    padding: 0.5%;
+}
+
+.contenedor-lista {
+    grid-area: list;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#accesorios-titulo {
+    margin-bottom: 1%;
+}
+
+#contenedor-cards {
+    grid-area: container;
+}
+
+.wrapper-cards {}
+
+.card {
+    height: 50%;
+    width: 50%;
+}

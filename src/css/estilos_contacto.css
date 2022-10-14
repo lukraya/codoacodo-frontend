@@ -13,6 +13,7 @@
     margin: 2%;
     grid-area: titulo;
     text-align: center;
+    font-size: 1.7rem;
 }
 
 .form {
@@ -106,7 +107,7 @@ all, print, screen. The type is optional (assumed to be all) except when using t
     }
 
     .contacto-titulo {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .form-item-left {
@@ -152,7 +153,7 @@ all, print, screen. The type is optional (assumed to be all) except when using t
     }
 
     .contacto-titulo {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .form {

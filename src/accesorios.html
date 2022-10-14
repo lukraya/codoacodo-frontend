@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta Pinta - Bienvenido</title>
+    <title>Alta Pinta - Accesorios</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos_accesorios.css">
     <script src="https://kit.fontawesome.com/21d5839768.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- Barra Navegación superior -->
     <header class="header">
         <nav>
             <!-- Barra de menu las tres lineas -->
@@ -53,62 +53,25 @@
             </div>
         </nav>
     </header>
+    <main class="main accesorios">
+        <section id="contenedor-cards">
 
-    <main class="main index-ppal">
-
-        <!-- Div contenedor del carrousel -->
-        <div class="carrousel">
-
-            <div class="grande">
-                <img src="img/C1.gif" alt="Imagen 1" class="img">
-                <img src="img/C2.gif" alt="Imagen 2" class="img">
-                <img src="img/C3.gif" alt="Imagen 3" class="img">
-            </div>
-
-            <ul class="puntos">
-                <li class="punto activo"></li>
-                <li class="punto"></li>
-                <li class="punto"></li>
-            </ul>
-        </div>
-        <script src="js/carrusel.js"></script>
-
-        <!-- Div para las categorias  -->
-        <section class="cat">
-            <a id="link" href="remeras.html">
-                <div class="wrap wrap--1">
-                    <div class="container container--1">
-                        <p>Remeras</p>
-                    </div>
-                </div>
-            </a>
-            <a id="link" href="pantalones.html">
-                <div class="wrap wrap--2">
-                    <div class="container container--2">
-                        <p>Pantalones</p>
-                    </div>
-                </div>
-            </a>
-            <a id="link" href="vestidos.html">
-                <div class="wrap wrap--3">
-                    <div class="container container--3">
-                        <p>Vestidos</p>
-                    </div>
-                </div>
-            </a>
-            <a id="link" href="faldas.html">
-                <div class="wrap wrap--4">
-                    <div class="container container--4">
-                        <p>Faldas</p>
-                    </div>
-                </div>
-            </a>
         </section>
+        <aside class="contenedor-lista">
+            <h1 id="accesorios-titulo">Accesorios</h1>
+            <ul>
+                <li><a href="">Item 1</a></li>
+                <li><a href="">Item 2</a></li>
+                <li><a href="">Item 3</a></li>
+                <li><a href="">Item 4</a></li>
+            </ul>
+        </aside>
     </main>
-
     <footer class="footer"> Sitio realizado como proyecto para el curso de Programación Fullstack Python del
         programa Codo a Codo
     </footer>
+
+    <script src="js/accesorios.js"></script>
 </body>
 
 </html>
