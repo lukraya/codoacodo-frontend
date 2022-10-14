@@ -3,6 +3,7 @@
     grid-template-areas:
         'list container';
     grid-template-columns: 1fr 2fr;
+    grid-template-rows: max-content;
     padding: 0.5%;
 }
 
@@ -15,15 +16,108 @@
 
 #accesorios-titulo {
     margin-bottom: 1%;
+    font-size: 2rem;
+    color: wheat;
+    background-color: rgb(175, 61, 61);
+    padding: 1%;
+}
+
+#list-wrapper {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#list-wrapper li {
+    text-align: center;
+    margin: 5% 0;
+}
+
+#list-wrapper li a {
+    color: wheat;
+    font-size: 1.3rem;
 }
 
 #contenedor-cards {
     grid-area: container;
+    display: grid;
+    grid-template-areas:
+        'item1 item2'
+        'item3 item4';
 }
 
-.wrapper-cards {}
+#item1 {
+    grid-area: item1;
+}
+
+#item2 {
+    grid-area: item2;
+}
+
+#item3 {
+    grid-area: item3;
+}
+
+#item4 {
+    grid-area: item4;
+}
 
 .card {
-    height: 50%;
-    width: 50%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    max-height: 300px;
+    height: 100%;
+    max-width: 300px;
+    width: 100%;
+}
+
+.card p {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .accesorios {
+        background-color: white;
+    }
+
+    #accesorios-titulo {
+        background-color: wheat;
+        color: rgb(175, 61, 61);
+        font-size: 1.5rem;
+    }
+
+    #list-wrapper li a {
+        color: rgb(175, 61, 61);
+        font-size: 1rem;
+    }
+
+    .card img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .card p {
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .accesorios {
+        grid-template-areas: 'container';
+        grid-template-columns: 1fr;
+
+    }
+
+    .contenedor-lista {
+        display: none;
+    }
 }

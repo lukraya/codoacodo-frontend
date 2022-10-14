@@ -31,7 +31,7 @@ async function renderProducts () {
         let div = ''
         //Itero el array de productos para crear un div con clase card y concatenarlo a mi string inicial por cada uno
         products.forEach(prod => {
-            div += `<div class="card">
+            div += `<div class="card" id="item`+(prod.id - 4)+`">
                         <img src="`+prod.image+`" alt="`+prod.title+`">
                         <p>`+prod.name+`</p>
                     </div>`
