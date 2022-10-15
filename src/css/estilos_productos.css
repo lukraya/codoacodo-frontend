@@ -2,36 +2,44 @@
 
 /***** GoogleFont *****/
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Combo&family=Montserrat:wght@400;600;900&display=swap');
+/***** Reseteando todo a cero *****/
 
-/* LU: fijate que en estilos.css ya hay una clase con ese nombre, podría ser wrap-store. Aunque veo que
-dentro del elemento con esta clase tenés otro div con "store-wrapper", no sé qué las diferencia/separa */
-.wrap{
-	/* LU: me parecería bueno evitar medidas absolutas, aunque acá está con max-width. Más fácil que sea responsivo*/
-	max-width: 1100px;
-	width: 90%;
-	margin: auto;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
     font-family: Montserrat, sans-serif;
 }
 
-/* LU: se podría hacer el espaciado entre los items con un justify-content en lugar de márgenes? */
+
+  .store{
+	display: flex;
+	flex-wrap: wrap;
+} 
+ 
+
 .products-list{
-	width: 82%;
+	width: 80%;
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .products-list .product-item{
-	width: 22%;
-	margin-left: 3%;
-	margin-bottom: 25px;
+/* 	width: 20%;
+	margin-left: 20%;
+	margin-bottom: 25px; */
+
+	justify-content:stretch;
+	justify-content:start;
 	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	align-self: flex-start;
-
 	transition: all .4s;
-}
+} 
 
 .products-list .product-item img{
 	width: 100%;
@@ -40,33 +48,27 @@ dentro del elemento con esta clase tenés otro div con "store-wrapper", no sé q
 .products-list .product-item a{
 	display: block;
 	width: 100%;
-	padding: 8px 0;
-	background: #2D3E50;
 
+	background: #2D3E50;
 	color: #fff;
 	text-align: center;
 	text-decoration: none;
 }
 
 
-.store-wrapper{
-	display: flex;
-	flex-wrap: wrap;
-}
-
-
-/* Barra lateral */
+/* Barra de categorias */
 
 .category_list{
-	font-family: Montserrat, sans-serif;
-	font-size: 2em;
-	display: flex;
-	flex-direction: column;
-	width: 18%;
+
+	width: 20%;
+ 	display: flex; 
+	flex-direction: column;	
 }
 
 .category_list .category_item{
 
+  display: flex;
+  flex-wrap: wrap;
   color: wheat;
   text-decoration: none;
   font-size: 1em;
@@ -79,46 +81,31 @@ dentro del elemento con esta clase tenés otro div con "store-wrapper", no sé q
 
 
 .category_list .category_item:hover{
-  background-color: rgb(175, 61, 61);
+  color: rgb(175, 61, 61);
+  font-weight: bold;
 }
 
 .category_list .ct_item-active{
-	background: rgb(175, 61, 61);
-}
-
-/* .menu{
-  display: flex;
-   flex-wrap: wrap;
-  background-color: wheat;
-  color: #fff;
-  height: 300px;
-} */
-
-.menu__container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 1em;
-  align-items: center;
-  width: 90%;
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
+	color: rgb(175, 61, 61);
+	font-weight: bold;
 }
 
 .menu__links{
-  height: 50%;
-  float:left;
-  flex-direction: column;
-  transition: transform .5s;
   display: flex;
-}
+  flex-direction: column;
+  justify-content: normal;
+  font-size: 1.5em;
+  width: 90%;
+  /* max-width: 1200px; */
+  margin: 10% 30%;
+
+} 
 
 .menu__item{
   float:left;
   list-style: none;
   position: relative;
-  height: 50%;
+  height: 60%;
   --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
   --transform: rotate(360deg);
 }
@@ -131,14 +118,16 @@ dentro del elemento con esta clase tenés otro div con "store-wrapper", no sé q
 .menu__link{
   color: wheat;
   text-decoration: none;
-	text-size-adjust: 100%;
+  justify-content: normal;
   display: flex;
   height: 100%;
+  padding-bottom: 1em;
   align-items: center;
 }
 
 .menu__link:hover{
-  background-color: rgb(175, 61, 61);
+  color: rgb(175, 61, 61);
+  font-weight: bold;
 }
 
 
@@ -147,8 +136,8 @@ dentro del elemento con esta clase tenés otro div con "store-wrapper", no sé q
   transform: var(--transform);
   transition: transform .5s;
   display: block;
-  width: 20%;
-  margin-left: 3px;
+  width: 13%;
+  margin-left: 1em;
 
 }
 
@@ -158,8 +147,8 @@ dentro del elemento con esta clase tenés otro div con "store-wrapper", no sé q
   transition:clip-path .3s;
   clip-path: var(--clip);
   position:  absolute;
-  left: 100%;
-  bottom: 70%;
+  left: 50%;
+  bottom: 100%;
   width: max-content;
   transform: translateY(100%);
   background-color: rgba(0, 0, 0, 0.719);
@@ -189,7 +178,7 @@ dentro del elemento con esta clase tenés otro div con "store-wrapper", no sé q
 .products-list .product-item a{
 	display: block;
 	width: 100%;
-	padding: 8px 0;
+
 	background: #2D3E50;
 	color: #fff;
 	text-align: center;

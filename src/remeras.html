@@ -58,74 +58,70 @@
         </nav>
     </header>
 
-    <!-- LU: cambio el div general por main, para mantener la estructura en todo el sitio, y porque piden que 
-    usemos etiquetas semánticas.
-    Se rompe un poco la posición del footer al pie de la página, sospecho q por los submenúes, particularmente
-    el de color (rojo, negro, blanco), pero eso ya no lo quiero tocar por miedo a romper -->
-
-    <main class="wrap">
-        <div class="store-wrapper">
+        <seccion class="store">      
 
             <!-- Menu -->
+            
             <aside class="category_list">
 
                 <ul class="menu__links">
                     <li class="menu__item">
-                        <a href="#" class="category_item" category="all">Remeras</a>
+                        <a href="#" class="category_item" category="all">REMERAS</a>
                     </li>
-
+        
                     <li class="menu__item menu__item--show">
-                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> Talles </a>
-
+                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> TALLES </a>
+        
                         <ul class="menu__nesting">
                             <li class="menu__inside">
-                                <a href="#" class="category_item" category="talle_s">Talle S</a>
+                                <a href="#" class="category_item" category="talle_s">TALLE S</a>
                             </li>
                             <li class="menu__inside">
-                                <a href="#" class="category_item" category="talle_m">Talle M</a>
+                                <a href="#" class="category_item" category="talle_m">TALLE M</a>
                             </li>
                             <li class="menu__inside">
-                                <a href="#" class="category_item" category="talle_l">Talle L</a>
+                                <a href="#" class="category_item" category="talle_l">TALLE L</a>
                             </li>
                         </ul>
                     </li>
-
+        
                     <li class="menu__item  menu__item--show">
-                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> Tipo</a>
-
+                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> TIPO</a>
+        
                         <ul class="menu__nesting">
                             <li class="menu__inside">
-                                <a href="#" class="category_item" category="manga_corta">Manga Corta</a>
+                                <a href="#" class="category_item" category="manga_corta">MANGA CORTA</a>
                             </li>
                             <li class="menu__inside">
-                                <a href="#" class="category_item" category="manga_larga">Manga Larga</a>
+                                <a href="#" class="category_item" category="manga_larga">MANGA LARGA</a>
                             </li>
                         </ul>
                     </li>
-
+        
                     <li class="menu__item  menu__item--show">
-                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> Color</a>
-
+                        <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> COLOR</a>
+        
                         <ul class="menu__nesting">
                             <li class="menu__inside">
-                                <a href="#" class="category_item" category="color_rojo">Rojo</a>
+                                <a href="#" class="category_item" category="color_rojo">ROJO</a>
                             </li>
                             <li class="menu__inside">
-                                <a href="#" class="category_item" category="color_negro">Negro</a>
+                                <a href="#" class="category_item" category="color_negro">NEGRO</a>
                             </li>
                             <li class="menu__inside">
-                                <a href="#" class="category_item" category="color_blanco">Blanco</a>
+                                <a href="#" class="category_item" category="color_blanco">BLANCO</a>
                             </li>
                         </ul>
                     </li>
-
+        
                 </ul>
-
-
+        
+        
             </aside>
-
+            
             <!-- Productos -->
-            <section class="products-list">
+
+            <div class="products-list">
                 <div class="product-item" category="talle_s">
                     <img src="img/remeras/talles_s.jpg" alt="">
                     <a href="#">Talle S</a>
@@ -160,9 +156,9 @@
                     <img src="img/remeras/color_blanco.jpg" alt="">
                     <a href="#">Color Blanco</a>
                 </div>
-            </section>
-        </div>
-    </main>
+            </div>
+       
+        </seccion>
 
 
 
