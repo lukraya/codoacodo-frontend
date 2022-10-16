@@ -203,10 +203,6 @@ nav {
 
 /***** CATEGORIAS *****/
 
-/* .index-ppal .cat {
-    grid-area: cat;
-  }
-   */
 .cat {
     width: 100vw;
 
@@ -294,16 +290,16 @@ nav {
 }
 
 .container--3 {
-    background: url("https://m.media-amazon.com/images/I/61QsX80M7pS._AC_UX385_.jpg");
-    background-position: 40% 10%;
-    background-size: 100%;
-}
-
-.container--4 {
     background: url("https://static.massimodutti.net/3/photos/2022/V/0/1/p/5213/819/712/5213819712_2_6_16.jpg");
     background-position: 40% 10%;
     background-size: 100%;
 }
+.container--4 {
+    background: url("https://1.bp.blogspot.com/-0pHoG2gCzp8/VoJUQL3bC8I/AAAAAAAAHPU/TznlkY7Dkh8/s640/tJryk4IpNv.png");
+    background-position: 40% 10%;
+    background-size: 120%;
+}
+
 
 .container p {
     color: rgb(72, 72, 72);
