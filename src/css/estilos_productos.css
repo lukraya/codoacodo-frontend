@@ -18,43 +18,6 @@
 	display: flex;
 	flex-wrap: wrap;
 } 
- 
-
-.products-list{
-	width: 80%;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.products-list .product-item{
-/* 	width: 20%;
-	margin-left: 20%;
-	margin-bottom: 25px; */
-
-	justify-content:stretch;
-	justify-content:start;
-	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-self: flex-start;
-	transition: all .4s;
-} 
-
-.products-list .product-item img{
-	width: 100%;
-}
-
-.products-list .product-item a{
-	display: block;
-	width: 100%;
-
-	background: #2D3E50;
-	color: #fff;
-	text-align: center;
-	text-decoration: none;
-}
-
 
 /* Barra de categorias */
 
@@ -94,7 +57,7 @@
   display: flex;
   flex-direction: column;
   justify-content: normal;
-  font-size: 1.5em;
+  font-size: 1.2em;
   width: 90%;
   /* max-width: 1200px; */
   margin: 10% 30%;
@@ -136,7 +99,7 @@
   transform: var(--transform);
   transition: transform .5s;
   display: block;
-  width: 13%;
+  width: 10%;
   margin-left: 1em;
 
 }
@@ -147,44 +110,52 @@
   transition:clip-path .3s;
   clip-path: var(--clip);
   position:  absolute;
-  left: 50%;
-  bottom: 100%;
+  left: 40%;
+  bottom: 120%;
   width: max-content;
   transform: translateY(100%);
-  background-color: rgba(0, 0, 0, 0.719);
+  /* background-color: rgba(0, 0, 0, 0.719); */
 }
 
 
 /* Lista de productos*/
+.products-list{
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
 
 .products-list .product-item{
 	width: 30%;
 	margin-left: 3%;
-	margin-bottom: 25px;
+	margin-bottom: 10%;
 	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
-
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	align-self: flex-start;
-
+	align-items: stretch;
+	align-self: center;
 	transition: all .4s;
 }
 
 .products-list .product-item img{
+	height: 90%;
 	width: 100%;
 }
 
 .products-list .product-item a{
 	display: block;
 	width: 100%;
-
+	height: 10%;
 	background: #2D3E50;
 	color: #fff;
 	text-align: center;
 	text-decoration: none;
 }
 
+
+/* Coming Soon */
 .coming_soon{
 	width: 30%;
 	position: absolute;
