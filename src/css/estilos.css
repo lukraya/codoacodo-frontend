@@ -28,7 +28,6 @@ body {
         "header"
         "main"
         "footer";
-
 }
 
 /***** HEADER *****/
@@ -84,9 +83,15 @@ nav {
 }
 
 .nav-menu li {
+    /* LU: Dependiendo de la altura de la pág, o sea del contenido, el menú llega a ser demasiado largo y sobrepasa al
+    footer, por ej en las págs en construcción. Lo único que se me ocurre para arreglar eso es achicar letra y
+    márgenes; y de paso usar medidas relativas */
     display: none;
-    line-height: 30px;
-    margin: 50px 0;
+    /* line-height: 30px; */
+    line-height: 3.3rem;
+
+    /* margin: 50px 0; */
+    /* margin: 25% 0; */
     transition: all .5s;
 }
 
@@ -109,7 +114,9 @@ nav {
 }
 
 #check:checked~.nav-menu {
-    height: 100vh;
+    /* height: 100vh; */
+    /* LU: me seguía pasando que dependiendo de la altura del viewport, el fondo del menú no cubría todo */
+    height: min-content;
 }
 
 #check:checked~.nav-menu li {
@@ -212,7 +219,7 @@ nav {
     align-items: center;
 }
 
-.cat a{
+.cat a {
     text-decoration: none;
     color: transparent;
 }
@@ -294,6 +301,7 @@ nav {
     background-position: 40% 10%;
     background-size: 100%;
 }
+
 .container--4 {
     background: url("https://1.bp.blogspot.com/-0pHoG2gCzp8/VoJUQL3bC8I/AAAAAAAAHPU/TznlkY7Dkh8/s640/tJryk4IpNv.png");
     background-position: 40% 10%;
@@ -316,228 +324,6 @@ nav {
 
 }
 
-/*.*.*.*.* GUIA DE TALLES *.*.*.*.*/
-
-.contenedor_talles {
-    /* border: 2px solid white; */
-    width: 90vw;
-    margin: auto;
-
-    font-size: 16px;
-    position: relative;
-}
-
-.talles_imagen {
-    /* border: 1.5px solid yellow; */
-    width: 35%;
-    display: block;
-    margin: auto;
-}
-
-.flip_card_inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s ease-in;
-    transform-style: preserve-3d;
-}
-
-.flip_card_frente,
-.flip_card_back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-.flip_card_back p,
-.flip_card_frente p {
-    background-color: gray;
-    font-size: 1.5vw;
-}
-
-.flip_card_back {
-    transform: rotateY(180deg);
-}
-
-/* ¿Cómo medir busto? */
-.busto {
-    position: absolute;
-    top: 15%;
-    left: 70%;
-
-    width: 25vw;
-    height: 85px;
-    padding: 5px;
-
-    perspective: 1000px;
-    text-align: center;
-
-    cursor: pointer;
-}
-
-.flip_card_busto:hover .busto {
-    transform: rotateY(180deg);
-}
-
-.busto_back::before {
-    content: "";
-    position: absolute;
-    width: 50%;
-    top: 50%;
-    right: 100%;
-
-    border: 1px solid rgb(255, 225, 173);
-    background-color: rgb(154, 154, 154);
-}
-
-.busto_back {
-    right: 2%;
-    width: 25vw;
-    height: auto;
-}
-
-.busto_back:hover .busto_back::before {
-    width: 100rem;
-    top: 50%;
-    visibility: visible;
-}
-
-/* ¿Cómo medir cintura? */
-
-.cintura {
-    position: absolute;
-    top: 25%;
-    left: 70%;
-
-    width: 25vw;
-    height: 85px;
-    padding: 5px;
-    perspective: 1000px;
-    text-align: center;
-
-    cursor: pointer;
-}
-
-.flip_card_cintura:hover .cintura {
-    transform: rotateY(180deg);
-}
-
-.cintura_back {
-    right: 2%;
-    width: 25vw;
-    height: auto;
-}
-
-.cintura_back::before {
-    content: "";
-    position: absolute;
-    width: 70%;
-    top: 50%;
-    right: 100%;
-
-    border: 1px solid rgb(255, 225, 173);
-    background-color: rgb(154, 154, 154);
-}
-
-.cintura_back:hover .cintura_back::before {
-    width: 200rem;
-    visibility: visible;
-}
-
-/* ¿Cómo medir cadera? */
-
-.cadera {
-    position: absolute;
-    top: 57%;
-    right: 60%;
-
-    width: 25vw;
-    height: 85px;
-
-    padding: 5px;
-    perspective: 1000px;
-    text-align: center;
-
-    cursor: pointer;
-}
-
-.flip_card_cadera:hover .cadera {
-    transform: rotateY(-180deg);
-}
-
-.cadera_back {
-    right: 3%;
-
-    width: 25vw;
-
-    height: auto;
-}
-
-.cadera_back::before {
-    content: "";
-    position: absolute;
-    width: 70%;
-    top: 50%;
-    left: 100%;
-
-    border: 1px solid rgb(255, 225, 173);
-    background-color: rgb(154, 154, 154);
-}
-
-.cadera_back:hover .cadera_back::before {
-    width: 200rem;
-    visibility: visible;
-}
-
-/* ¿Cómo medir pierna? */
-
-.pierna {
-    position: absolute;
-    top: 72%;
-    right: 60%;
-    width: 25vw;
-    height: 115px;
-    padding: 5px;
-    perspective: 1000px;
-    text-align: center;
-
-    cursor: pointer;
-}
-
-.flip_card_pierna:hover .pierna {
-    transform: rotateY(180deg);
-}
-
-.pierna_back {
-    right: 3%;
-    width: 25vw;
-    height: auto;
-}
-
-.pierna_back::before {
-    content: "";
-    position: absolute;
-    width: 70%;
-    top: 50%;
-    left: 100%;
-
-    border: 1px solid rgb(255, 225, 173);
-    background-color: rgb(154, 154, 154);
-}
-
-.pierna_back:hover .pierna_back::before {
-    width: 50%;
-    visibility: visible;
-}
-
-/* Tabla talles */
-.tabla_talles {
-    display: block;
-    margin: auto;
-    width: 65vw;
-}
 
 /***** FOOTER *****/
 .footer {
@@ -549,6 +335,7 @@ nav {
     text-align: center;
 }
 
+
 @media (max-width:768px) {
     body {
         background-color: aliceblue;
@@ -558,53 +345,30 @@ nav {
         background-color: aliceblue;
     }
 
-    nav {
+    /* LU: me parece mejor aplicarlo así */
+    /* nav */
+    .header {
         background: rgba(132, 131, 131, 0.442);
     }
 
     .nav-menu {
         width: 50%;
     }
-
-    .flip_card_frente p {
-        color: black;
-        background-color: rgba(250, 209, 159, 0.64);
-    }
-
-    .cadera,
-    .pierna {
-        left: 0%;
-    }
-
-    .busto,
-    .cintura {
-        right: 0%;
-    }
-
-    .busto_back:hover .busto_back::before,
-    .cintura_back:hover .cintura_back::before,
-    .cadera_back:hover .cadera_back::before,
-    .pierna_back:hover .pierna_back::before {
-        width: 100rem;
-
-    }
-
-
-
 }
 
 @media (max-width:415px) {
-    body {
+    /* LU: ya le queda del otro media query */
+    /* body {
         background-color: aliceblue;
-    }
+    } */
 
-    .main {
+    /* .main {
         background-color: aliceblue;
-    }
+    } */
 
-    nav {
+    /* nav {
         background: rgba(132, 131, 131, 0.442);
-    }
+    } */
 
     .nav-menu {
         width: 100%;
@@ -616,7 +380,5 @@ nav {
 
     .footer {
         font-size: 0.6rem;
-        /* margin-top: 4%; */
     }
-
 }

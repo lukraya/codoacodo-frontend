@@ -1,5 +1,5 @@
 let form = document.getElementsByName('fcontacto')[0];
-let boton = document.getElementById('boton-contacto');
+//let boton = document.getElementById('boton-contacto');
 
 
 let validarSubmit = e => {

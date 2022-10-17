@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <!-- Barra Navegación superior -->
         <nav>
             <!-- Barra de menu las tres lineas -->
@@ -27,12 +27,11 @@
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="remeras.html">Remeras</a></li>
                 <li><a href="pantalones.html">Pantalones</a></li>
-                <li><a href="vestidos.html">Vestidos</a></li>
+                <!-- <li><a href="vestidos.html">Vestidos</a></li> -->
                 <li><a href="faldas.html">Faldas</a></li>
+                <li><a href="accesorios.html">Accesorios</a></li>
                 <li><a href="guiat.html">Guía de talles</a></li>
-                <li><a href="accesorios.html">accesorios</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <!-- <li><a href="#">#</a></li> -->
             </ul>
             <!-- Barra de busqueda -->
             <div class="buscar">
@@ -58,21 +57,23 @@
 
         </nav>
     </header>
-
-        <seccion class="store">      
+    <!-- LU: Germán, te vuelvo a agregar main acá porque es lo que acordamos como grupo para tener una coherencia de 
+    maqueteado y algunos estilos en todo el sitio. Si no estás de acuerdo por favor hablalo. -->
+    <main class="main">
+        <section class="store">
 
             <!-- Menu -->
-            
+
             <aside class="category_list">
 
                 <ul class="menu__links">
                     <li class="menu__item">
                         <a href="#" class="category_item" category="all">REMERAS</a>
                     </li>
-        
+
                     <li class="menu__item menu__item--show">
                         <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> TALLES </a>
-        
+
                         <ul class="menu__nesting">
                             <li class="menu__inside">
                                 <a href="#" class="category_item" category="talle_s">TALLE S</a>
@@ -85,10 +86,10 @@
                             </li>
                         </ul>
                     </li>
-        
+
                     <li class="menu__item  menu__item--show">
                         <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> TIPO</a>
-        
+
                         <ul class="menu__nesting">
                             <li class="menu__inside">
                                 <a href="#" class="category_item" category="manga_corta">MANGA CORTA</a>
@@ -98,10 +99,10 @@
                             </li>
                         </ul>
                     </li>
-        
+
                     <li class="menu__item  menu__item--show">
                         <a href="#" class="menu__link"> <img src="img\logo_menu.png" class="menu__logo"> COLOR</a>
-        
+
                         <ul class="menu__nesting">
                             <li class="menu__inside">
                                 <a href="#" class="category_item" category="color_rojo">ROJO</a>
@@ -114,12 +115,12 @@
                             </li>
                         </ul>
                     </li>
-        
+
                 </ul>
-        
-        
+
+
             </aside>
-            
+
             <!-- Productos -->
 
             <div class="products-list">
@@ -158,10 +159,9 @@
                     <a href="#">Color Blanco</a>
                 </div>
             </div>
-       
-        </seccion>
 
-
+        </section>
+    </main>
 
     <footer class="footer">Sitio realizado como proyecto para el curso de Programación Fullstack Python del programa
         Codo a Codo

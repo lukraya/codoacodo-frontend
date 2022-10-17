@@ -5,30 +5,32 @@
 /***** Reseteando todo a cero *****/
 
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
 }
 
+/* LU: no hace falta repetir todo lo anterior si ya tenés linkeado estilos.css en tu html */
 
-  .store{
-	display: flex;
-	flex-wrap: wrap;
-} 
+.store {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 /* Barra de categorias */
 
-.category_list{
+.category_list {
 
-	width: 20%;
- 	display: flex; 
-	flex-direction: column;	
+  width: 20%;
+  /* Lu: me parece que el flex acá no hace falta, porque tiene un solo elemento hijo */
+  display: flex;
+  flex-direction: column;
 }
 
-.category_list .category_item{
+.category_list .category_item {
 
   display: flex;
   flex-wrap: wrap;
@@ -43,28 +45,30 @@
 }
 
 
-.category_list .category_item:hover{
+.category_list .category_item:hover {
   color: rgb(175, 61, 61);
   font-weight: bold;
 }
 
-.category_list .ct_item-active{
-	color: rgb(175, 61, 61);
-	font-weight: bold;
+.category_list .ct_item-active {
+  color: rgb(175, 61, 61);
+  font-weight: bold;
 }
 
-.menu__links{
+/* LU: algún punto de los estilos de la ul o sus hijos hace que ya al pasar el primer media query de 1000px,
+cuando "product-list" se mueve para abajo, que quede un espacio extra hacia la derecha, más allá del ancho de toda la 
+página (más ancho que el header y el footer por ej). Lo raro es que no es un overflow */
+.menu__links {
   display: flex;
   flex-direction: column;
   justify-content: normal;
   font-size: 1.2em;
   width: 90%;
   margin: 10% 30%;
+}
 
-} 
-
-.menu__item{
-  float:left;
+.menu__item {
+  float: left;
   list-style: none;
   position: relative;
   height: 60%;
@@ -72,12 +76,12 @@
   --transform: rotate(360deg);
 }
 
-.menu__item:hover{
+.menu__item:hover {
   --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   --transform: rotate(0);
 }
 
-.menu__link{
+.menu__link {
   color: wheat;
   text-decoration: none;
   justify-content: normal;
@@ -87,13 +91,13 @@
   align-items: center;
 }
 
-.menu__link:hover{
+.menu__link:hover {
   color: rgb(175, 61, 61);
   font-weight: bold;
 }
 
 
-.menu__logo{
+.menu__logo {
 
   transform: var(--transform);
   transition: transform .5s;
@@ -103,12 +107,12 @@
 
 }
 
-.menu__nesting{
+.menu__nesting {
   z-index: 1000;
   list-style: none;
-  transition:clip-path .3s;
+  transition: clip-path .3s;
   clip-path: var(--clip);
-  position:  absolute;
+  position: absolute;
   left: 40%;
   bottom: 120%;
   width: max-content;
@@ -118,85 +122,93 @@
 
 
 /* Lista de productos*/
-.products-list{
-	width: 80%;
-	display: flex;
-	flex-wrap: wrap;
+.products-list {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
 
-.products-list .product-item{
-	width: 30%;
-	margin-left: 3%;
-	margin-bottom: 10%;
-	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	align-self: stretch;
-	transition: all .4s;
+.products-list .product-item {
+  width: 30%;
+  margin-left: 3%;
+  margin-bottom: 10%;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-self: stretch;
+  transition: all .4s;
 }
 
-.products-list .product-item img{
-	height: 90%;
-	width: 100%;
+.products-list .product-item img {
+  height: 90%;
+  width: 100%;
 }
 
-.products-list .product-item a{
-	display: block;
-	width: 100%;
-	background: #2D3E50;
-	color: #fff;
-	text-align: center;
-	text-decoration: none;
+.products-list .product-item a {
+  display: block;
+  width: 100%;
+  background: #2D3E50;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
 }
 
 
 /* Coming Soon */
-.coming_soon{
-	width: 30%;
-	position: absolute;
-	right: 35%;
-	top: 20%;
+.coming_soon {
+  width: 30%;
+  position: absolute;
+  right: 35%;
+  top: 20%;
 }
 
 
 
-/* RESPONSIVE */ 
+/* RESPONSIVE */
 
 
-@media screen and (max-width: 1200px){
-	.menu__nesting{
-		left: 50%;
-	  }
-	
-	.products-list .product-item{
-		width: 40%;
-	}
-	}
-	
+@media screen and (max-width: 1200px) {
+  .menu__nesting {
+    left: 50%;
+  }
+
+  .products-list .product-item {
+    width: 40%;
+  }
+}
 
 
-@media screen and (max-width: 1000px){
-	.menu__nesting{
-		left: 25%;
-		bottom: 100%;
-	  }
-	.category_list,
-	.products-list{
-		width: 100%;
-		
-	}
+
+@media screen and (max-width: 1000px) {
+  .menu__nesting {
+    left: 25%;
+    bottom: 100%;
+  }
+
+  .category_list,
+  .products-list {
+    width: 100%;
+
+  }
 
 }
 
-@media screen and (max-width: 700px){
-	.product_list{
-		flex-direction: column;
-	}
-	.products-list .product-item{
-		width: 100%;
-		margin: 3% 3%;
-	}
+@media screen and (max-width: 768px) {
+  .main {
+    background: linear-gradient(125deg, black, rgb(81, 80, 80));
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .product_list {
+    flex-direction: column;
+  }
+
+  .products-list .product-item {
+    width: 100%;
+    margin: 3% 3%;
+  }
 }
