@@ -55,7 +55,7 @@
   font-weight: bold;
 }
 
-/* LU: algún punto de los estilos de la ul o sus hijos hace que ya al pasar el primer media query de 1000px,
+/* LU: algún punto de los estilos de la ul o sus hijos hace que ya al pasar el media query de 1000px,
 cuando "product-list" se mueve para abajo, que quede un espacio extra hacia la derecha, más allá del ancho de toda la 
 página (más ancho que el header y el footer por ej). Lo raro es que no es un overflow */
 .menu__links {
@@ -168,8 +168,6 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
 
 
 /* RESPONSIVE */
-
-
 @media screen and (max-width: 1200px) {
   .menu__nesting {
     left: 50%;
