@@ -2,18 +2,13 @@
 
 /***** GoogleFont *****/
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Combo&family=Montserrat:wght@400;600;900&display=swap');
-/***** Reseteando todo a cero *****/
 
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-  font-family: Montserrat, sans-serif;
+
+.nav-menu {
+  background-color: rgba(47, 46, 46, 1);
 }
 
-/* LU: no hace falta repetir todo lo anterior si ya tenés linkeado estilos.css en tu html */
+/* Nav */
 
 .store {
   display: flex;
@@ -63,8 +58,8 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
   flex-direction: column;
   justify-content: normal;
   font-size: 1.2em;
-  width: 90%;
-  margin: 10% 30%;
+  width: 80%;
+  margin: 3% 3%;
 }
 
 .menu__item {
@@ -133,7 +128,8 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
 .products-list .product-item {
   width: 30%;
   margin-left: 3%;
-  margin-bottom: 10%;
+  margin-top: 3%;
+  margin-bottom: 3%;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
@@ -168,22 +164,51 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
 
 
 /* RESPONSIVE */
-@media screen and (max-width: 1200px) {
-  .menu__nesting {
-    left: 50%;
-  }
+@media screen and (max-width: 768px) {
 
-  .products-list .product-item {
-    width: 40%;
-  }
+
+  body {
+    background-color: aliceblue;
+}
+
+.main {
+    background-color: aliceblue;
+}
+
+.header {
+    background: rgba(132, 131, 131, 0.442);
+}
+
+.nav-menu {
+    width: 50%;
 }
 
 
+  .menu__link {
+    color: rgb(8, 6, 1);
+    font-weight: bold;
+    font-size: 0.9em;
+    padding-bottom: 0;
+  }
 
-@media screen and (max-width: 1000px) {
+  .menu__logo {
+
+    width: 0%;
+    margin-left: 0;
+  
+  }
+
+  .category_list .category_item {
+
+    color: rgb(8, 6, 1);
+    font-weight: bold;
+
+  }
+  
+
   .menu__nesting {
-    left: 25%;
-    bottom: 100%;
+    left: -20%;
+    bottom: 50%;
   }
 
   .category_list,
@@ -192,15 +217,28 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
 
   }
 
-}
-
-@media screen and (max-width: 768px) {
-  .main {
-    background: linear-gradient(125deg, black, rgb(81, 80, 80));
+  .menu__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    font-size: 1.2em;
+    width: 80%;
+    margin: 3% 3%;
   }
+
+  .menu__link {
+    text-decoration: none;
+    justify-content: normal;
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
 }
 
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 415px) {
+
   .product_list {
     flex-direction: column;
   }
