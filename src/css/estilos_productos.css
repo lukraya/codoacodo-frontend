@@ -4,8 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Combo&family=Montserrat:wght@400;600;900&display=swap');
 
 
+/* Menos transparencia menu*/
 .nav-menu {
-  background-color: rgba(47, 46, 46, 1);
+  background-color: rgba(47, 46, 46, 0.95);
 }
 
 /* Nav */
@@ -15,28 +16,27 @@
   flex-wrap: wrap;
 }
 
+
 /* Barra de categorias */
 
 .category_list {
 
-  width: 20%;
-  /* Lu: me parece que el flex acá no hace falta, porque tiene un solo elemento hijo */
-  display: flex;
-  flex-direction: column;
+  width: 15%;
+  color: wheat;
+  font-size: 1.5vw;
+  padding-left: 2%;
+
 }
 
 .category_list .category_item {
 
   display: flex;
   flex-wrap: wrap;
-  color: wheat;
   text-decoration: none;
-  font-size: 1em;
-  padding: 1em;
-  display: flex;
+  padding-bottom: 1em;
   height: 50%;
+  color: wheat;
   align-items: center;
-
 }
 
 
@@ -50,14 +50,10 @@
   font-weight: bold;
 }
 
-/* LU: algún punto de los estilos de la ul o sus hijos hace que ya al pasar el media query de 1000px,
-cuando "product-list" se mueve para abajo, que quede un espacio extra hacia la derecha, más allá del ancho de toda la 
-página (más ancho que el header y el footer por ej). Lo raro es que no es un overflow */
 .menu__links {
   display: flex;
   flex-direction: column;
   justify-content: normal;
-  font-size: 1.2em;
   width: 80%;
   margin: 3% 3%;
 }
@@ -66,7 +62,7 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
   float: left;
   list-style: none;
   position: relative;
-  height: 60%;
+  height: 100%;
   --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
   --transform: rotate(360deg);
 }
@@ -81,7 +77,6 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
   text-decoration: none;
   justify-content: normal;
   display: flex;
-  height: 100%;
   padding-bottom: 1em;
   align-items: center;
 }
@@ -97,32 +92,31 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
   transform: var(--transform);
   transition: transform .5s;
   display: block;
-  width: 10%;
-  margin-left: 1em;
+  width: 18%;
 
 }
 
-.menu__nesting {
-  z-index: 1000;
+.menu_despleglable{
+  z-index: 100%;
   list-style: none;
   transition: clip-path .3s;
   clip-path: var(--clip);
   position: absolute;
-  left: 40%;
-  bottom: 120%;
+  left: 80%;
+  bottom: 100%;
+  font-size: 90%;
   width: max-content;
   transform: translateY(100%);
-  /* background-color: rgba(0, 0, 0, 0.719); */
 }
 
 
 /* Lista de productos*/
 .products-list {
-  width: 80%;
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 3%;
 }
-
 
 
 .products-list .product-item {
@@ -167,10 +161,6 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
 @media screen and (max-width: 768px) {
 
 
-  body {
-    background-color: aliceblue;
-}
-
 .main {
     background-color: aliceblue;
 }
@@ -179,22 +169,25 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
     background: rgba(132, 131, 131, 0.442);
 }
 
-.nav-menu {
-    width: 50%;
-}
-
-
   .menu__link {
     color: rgb(8, 6, 1);
     font-weight: bold;
-    font-size: 0.9em;
-    padding-bottom: 0;
+    padding: 10%;
   }
 
   .menu__logo {
 
-    width: 0%;
+    width: 10%;
     margin-left: 0;
+  
+  }
+
+
+  .category_list {
+
+    width: 100%;
+    font-size: 2vw;
+    padding-bottom: 10%;
   
   }
 
@@ -206,14 +199,21 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
   }
   
 
-  .menu__nesting {
-    left: -20%;
-    bottom: 50%;
+  .menu_despleglable{
+    left: 50%;
+    bottom: 120%;
+    transform: translateY(200%);
   }
+  
 
   .category_list,
   .products-list {
     width: 100%;
+
+  }
+  
+  .products-list .product-item {
+    width: 40%;
 
   }
 
@@ -230,6 +230,7 @@ página (más ancho que el header y el footer por ej). Lo raro es que no es un o
     text-decoration: none;
     justify-content: normal;
     display: flex;
+    flex-direction: column;
     height: 100%;
     align-items: center;
   }
