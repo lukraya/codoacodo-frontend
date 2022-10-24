@@ -34,7 +34,7 @@
   flex-wrap: wrap;
   text-decoration: none;
   padding-bottom: 1em;
-  height: 50%;
+  height: 40%;
   color: wheat;
   align-items: center;
 }
@@ -104,7 +104,7 @@
   left: 80%;
   bottom: 100%;
   font-size: 90%;
-  width: max-content;
+  width: auto;
   transform: translateY(100%);
 }
 
