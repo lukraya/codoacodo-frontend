@@ -98,7 +98,6 @@
 
 .menu_despleglable{
   z-index: 1000;
-  list-style: none;
   transition: clip-path .3s;
   clip-path: var(--clip);
   position: absolute;
@@ -201,8 +200,9 @@
 
   .menu_despleglable{
     left: 50%;
-    bottom: 120%;
+    bottom: 180%;
     transform: translateY(200%);
+    width: auto;
   }
   
 
