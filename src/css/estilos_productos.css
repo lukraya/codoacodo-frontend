@@ -97,7 +97,7 @@
 }
 
 .menu_despleglable{
-  z-index: 100%;
+  z-index: 1000;
   list-style: none;
   transition: clip-path .3s;
   clip-path: var(--clip);
