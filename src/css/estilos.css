@@ -83,15 +83,9 @@ nav {
 }
 
 .nav-menu li {
-    /* LU: Dependiendo de la altura de la pág, o sea del contenido, el menú llega a ser demasiado largo y sobrepasa al
-    footer, por ej en las págs en construcción. Lo único que se me ocurre para arreglar eso es achicar letra y
-    márgenes; y de paso usar medidas relativas */
     display: none;
-    /* line-height: 30px; */
     line-height: 3.3rem;
-
-    /* margin: 50px 0; */
-    /* margin: 25% 0; */
+    margin: 1.5rem 0;
     transition: all .5s;
 }
 
@@ -357,19 +351,6 @@ nav {
 }
 
 @media (max-width:415px) {
-    /* LU: ya le queda del otro media query */
-    /* body {
-        background-color: aliceblue;
-    } */
-
-    /* .main {
-        background-color: aliceblue;
-    } */
-
-    /* nav {
-        background: rgba(132, 131, 131, 0.442);
-    } */
-
     .nav-menu {
         width: 100%;
     }
